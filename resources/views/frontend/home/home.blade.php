@@ -136,7 +136,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -151,7 +151,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -166,7 +166,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -181,7 +181,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -196,7 +196,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -211,7 +211,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -237,7 +237,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -252,7 +252,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -267,7 +267,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -282,7 +282,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -297,7 +297,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -312,7 +312,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -338,7 +338,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -353,7 +353,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -368,7 +368,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -383,7 +383,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -398,7 +398,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -413,7 +413,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -439,7 +439,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -454,7 +454,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -469,7 +469,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -484,7 +484,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -499,7 +499,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
@@ -514,7 +514,7 @@
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">Tk 69,500</p>
                 </div>
-                <div class="d-flex justify-content-center pb-2">
+                <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
                     <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
                     <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
