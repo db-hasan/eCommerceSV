@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('te',255)->nullable();
-            $table->integer('status')->default(1);
+            $table->bigIncrements('sales_id');
+            $table->string('data',50)->nullable();
+            $table->integer('sales_status')->default(1);
             $table->timestamps();
         });
     }

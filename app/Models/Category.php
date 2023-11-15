@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    protected $primaryKey='id';
+    protected $primaryKey='category_id';
 }

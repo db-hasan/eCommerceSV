@@ -12,9 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('te',255)->nullable();
-            $table->integer('status')->default(1);
+            $table->bigIncrements('customar_id');
+            $table->integer('order_id',5)->nullable();
+            $table->string('customar_name',50)->nullable();
+            $table->integer('customar_phone',50)->nullable();
+            $table->string('customar_email',50)->nullable();
+            $table->string('customar_address',50)->nullable();
+            $table->string('customar_city',50)->nullable();
+            $table->string('customar_zip',50)->nullable();
+            $table->integer('shiping_id',50)->nullable();
+            $table->string('shiping_address',50)->nullable();
+            $table->string('shiping_city',50)->nullable();
+            $table->integer('shiping_zip',50)->nullable();
             $table->timestamps();
         });
     }

@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('subcategories', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('te',255)->nullable();
-            $table->integer('status')->default(1);
+            $table->bigIncrements('sub_category_id');
+            $table->integer('category_id',50)->nullable();
+            $table->string('sub_category_name',50)->nullable();
+            $table->integer('sub_category_status')->default(1);
             $table->timestamps();
         });
     }

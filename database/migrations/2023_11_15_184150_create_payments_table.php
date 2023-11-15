@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('te',255)->nullable();
-            $table->integer('status')->default(1);
+            $table->bigIncrements('payment_id');
+            $table->integer('account_number',50)->nullable();
+            $table->string('transaction_id',50)->nullable();
+            $table->integer('payment_status')->default(1);
             $table->timestamps();
         });
     }

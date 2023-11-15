@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('units', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('te',255)->nullable();
-            $table->integer('status')->default(1);
+            $table->bigIncrements('unit_id');
+            $table->string('unit_name',50)->nullable();
+            $table->integer('unit_status')->default(1);
             $table->timestamps();
         });
     }

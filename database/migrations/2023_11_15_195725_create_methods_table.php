@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('category_id');
-            $table->string('category_name',50)->nullable();
-            $table->integer('category_status')->default(1);
+        Schema::create('methods', function (Blueprint $table) {
+            $table->bigIncrements('method_id');
+            $table->string('method_name',50)->nullable();
+            $table->integer('account_number',50)->nullable();
+            $table->integer('method_satus')->default(1);
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('methods');
     }
 };

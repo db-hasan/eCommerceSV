@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Color extends Model
 {
     use HasFactory;
-    protected $primaryKey='id';
+    protected $primaryKey='color_id';
 }
