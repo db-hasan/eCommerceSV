@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('methods', function (Blueprint $table) {
             $table->bigIncrements('method_id');
             $table->string('method_name',50)->nullable();
-            $table->integer('account_number',50)->nullable();
+            $table->string('account_number',50)->nullable();
             $table->integer('method_satus')->default(1);
             $table->timestamps();
         });

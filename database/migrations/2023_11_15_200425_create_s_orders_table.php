@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('s_orders', function (Blueprint $table) {
             $table->bigIncrements('s_order_id');
-            $table->integer('sales_id',50)->nullable();
-            $table->integer('product_id',50)->nullable();
-            $table->integer('s_quantity',50)->nullable();
+            $table->string('sales_id',50)->nullable();
+            $table->string('product_id',50)->nullable();
+            $table->string('s_quantity',50)->nullable();
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('purchaes', function (Blueprint $table) {
             $table->bigIncrements('purchaes_id');
-            $table->integer('suppliers_id',50)->nullable();
+            $table->string('suppliers_id',50)->nullable();
             $table->integer('purchaes_status')->default(1);
             $table->timestamps();
         });

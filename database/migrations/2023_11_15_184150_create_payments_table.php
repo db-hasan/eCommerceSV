@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('payment_id');
-            $table->integer('account_number',50)->nullable();
+            $table->string('account_number',50)->nullable();
             $table->string('transaction_id',50)->nullable();
             $table->integer('payment_status')->default(1);
             $table->timestamps();

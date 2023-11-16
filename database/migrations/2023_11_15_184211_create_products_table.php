@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('product_id');
-            $table->integer('category_id',50)->nullable();
-            $table->integer('sub_category',50)->nullable();
-            $table->integer('brand_id',50)->nullable();
-            $table->integer('unit_id',50)->nullable();
-            $table->integer('color_id',50)->nullable();
+            $table->string('category_id',50)->nullable();
+            $table->string('sub_category',50)->nullable();
+            $table->string('brand_id',50)->nullable();
+            $table->string('unit_id',50)->nullable();
+            $table->string('color_id',50)->nullable();
             $table->string('product_name',50)->nullable();
             $table->string('product_des',255)->nullable();
-            $table->integer('img_id',50)->nullable();
+            $table->string('img_id',50)->nullable();
             $table->integer('product_status')->default(1);
             $table->timestamps();
         });

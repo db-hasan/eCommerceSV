@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->bigIncrements('customar_id');
-            $table->integer('order_id',5)->nullable();
+            $table->string('order_id',5)->nullable();
             $table->string('customar_name',50)->nullable();
-            $table->integer('customar_phone',50)->nullable();
+            $table->string('customar_phone',50)->nullable();
             $table->string('customar_email',50)->nullable();
             $table->string('customar_address',50)->nullable();
             $table->string('customar_city',50)->nullable();
             $table->string('customar_zip',50)->nullable();
-            $table->integer('shiping_id',50)->nullable();
+            $table->string('shiping_id',50)->nullable();
             $table->string('shiping_address',50)->nullable();
             $table->string('shiping_city',50)->nullable();
-            $table->integer('shiping_zip',50)->nullable();
+            $table->string('shiping_zip',50)->nullable();
             $table->timestamps();
         });
     }

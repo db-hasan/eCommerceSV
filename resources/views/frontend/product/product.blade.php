@@ -80,7 +80,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="product ms-2">
             <div class="product_header ">

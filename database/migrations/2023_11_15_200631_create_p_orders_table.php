@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('p_orders', function (Blueprint $table) {
             $table->bigIncrements('p_order_id');
-            $table->integer('purchaes_id',50)->nullable();
-            $table->integer('product_id',50)->nullable();
-            $table->integer('p_order_quantity',50)->nullable();
-            $table->integer('purchaes_price',50)->nullable();
-            $table->integer('sales_price',50)->nullable();
+            $table->string('purchaes_id',50)->nullable();
+            $table->string('product_id',50)->nullable();
+            $table->string('p_order_quantity',50)->nullable();
+            $table->string('purchaes_price',50)->nullable();
+            $table->string('sales_price',50)->nullable();
             $table->integer('p_order_status')->default(1);
             $table->timestamps();
         });
