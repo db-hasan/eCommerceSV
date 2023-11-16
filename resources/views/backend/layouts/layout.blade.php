@@ -69,9 +69,17 @@
                 <li class="">
                     <a href="{{ route('unit.index') }}">
                         <span class="icon">
-                            <i class="fa-solid fa-layer-group fa-lg"></i>
+                            <i class="fa-brands fa-docker fa-lg"></i>
                         </span>
                         <span class="title">Units</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('product.index') }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-dolly fa-lg"></i>
+                        </span>
+                        <span class="title">Product</span>
                     </a>
                 </li>
 

@@ -13,6 +13,7 @@
       <div class="col-md-6">
         <label for="category_name" class="form-label">Category Name</label>
         <select class="form-select" aria-label="Default select example" name="category_name">
+          <option value="">Sclect One</option>
           @foreach ($indexcategory as $itemcategory)
           <option value="{{$itemcategory->category_id}}">{{$itemcategory->category_name}}</option>
           @endforeach
