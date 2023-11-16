@@ -35,15 +35,15 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/admin/package')}}">
+                    <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-regular fa-folder-open fa-lg"></i>
                         </span>
-                        <span class="title">Package</span>
+                        <span class="title">Brand</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/admin/booking')}}">
+                    <a href="{{ route('brand.create') }}">
                         <span class="icon">
                             <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
                         </span>
@@ -131,7 +131,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/admin/user')}}">
+                    <a href="">
                         <span class="icon">
                             <i class="fa-solid fa-users fa-lg"></i>
                         </span>
@@ -297,6 +297,7 @@
                             onclick="event.preventDefault();
                             this.closest('form').submit();">
                             <i class="fas fa-sign-out-alt"></i> {{ __('Log Out') }}</a>
+                            </form>
                         </li>
                         
                     </ul>
