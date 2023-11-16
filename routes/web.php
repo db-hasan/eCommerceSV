@@ -52,6 +52,16 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('subcategory/index',[SubcategoryController::class,'index'])->name('subcategory.index');
+    Route::get('subcategory/insert',[SubcategoryController::class,'create'])->name('subcategory.create');
+    Route::post('subcategory/insert',[SubcategoryController::class,'store'])->name('subcategory.store');
+    Route::get('subcategory/update/{subcategory_id}',[SubcategoryController::class,'edit'])->name('subcategory.edit');
+    Route::post('subcategory/update/{subcategory_id}',[SubcategoryController::class,'update'])->name('subcategory.update');
+    Route::get('subcategory/show/{subcategory_id}',[SubcategoryController::class,'show'])->name('subcategory.show');
+    Route::get('subcategory/destroy/{subcategory_id}',[SubcategoryController::class,'destroy'])->name('subcategory.destroy');
+});
+
+Route::middleware('auth')->group(function () {
     Route::get('brand/index',[BrandController::class,'index'])->name('brand.index');
     Route::get('brand/insert',[BrandController::class,'create'])->name('brand.create');
     Route::post('brand/insert',[BrandController::class,'store'])->name('brand.store');

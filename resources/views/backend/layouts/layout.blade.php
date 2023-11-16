@@ -43,9 +43,9 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.index') }}">
+                    <a href="{{ route('subcategory.index') }}">
                         <span class="icon">
-                            <i class="fa-solid fa-layer-group fa-lg"></i>
+                            <i class="fa-solid fa-folder-tree fa-lg"></i>
                         </span>
                         <span class="title">SubCategory</span>
                     </a>
