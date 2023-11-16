@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.index') }}">
+                    <a href="{{ route('category.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-layer-group fa-lg"></i>
                         </span>
@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-layer-group fa-lg"></i>
                         </span>
@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-tag fa-lg"></i>
                         </span>
@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('color.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-droplet fa-lg"></i>
                         </span>
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('unit.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-layer-group fa-lg"></i>
                         </span>
@@ -76,7 +76,7 @@
                 </li>
 
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-cart-flatbed-suitcase fa-lg"></i>
                         </span>
@@ -84,7 +84,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('supplier.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-truck-field fa-lg"></i>
                         </span>
@@ -92,7 +92,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/admin/promo')}}">
+                    <a href="{{ route('promo.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-percent fa-lg"></i>
                         </span>
@@ -100,7 +100,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{ route('brand.create') }}">
+                    <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
                         </span>
@@ -117,7 +117,7 @@
                 </li>
                 
                 <li class="">
-                    <a href="{{url('/admin/expense')}}">
+                    <a href="{{ route('supplier.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-baby-carriage fa-lg"></i>
                         </span>
@@ -149,7 +149,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/contact/index')}}">
+                    <a href="">
                         <span class="icon">
                             <i class="fa-solid fa-address-card fa-lg"></i>
                         </span>
