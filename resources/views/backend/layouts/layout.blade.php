@@ -37,25 +37,58 @@
                 <li class="">
                     <a href="{{ route('brand.index') }}">
                         <span class="icon">
-                            <i class="fa-regular fa-folder-open fa-lg"></i>
+                            <i class="fa-solid fa-layer-group fa-lg"></i>
                         </span>
-                        <span class="title">Brand</span>
+                        <span class="title">Category</span>
                     </a>
                 </li>
                 <li class="">
                     <a href="{{ route('brand.create') }}">
                         <span class="icon">
-                            <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
+                            <i class="fa-solid fa-layer-group fa-lg"></i>
                         </span>
-                        <span class="title">Booking</span>
+                        <span class="title">SubCategory</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="">
+                    <a href="{{ route('brand.create') }}">
                         <span class="icon">
-                            <i class="fa-regular fa-credit-card fa-lg"></i>
+                            <i class="fa-solid fa-tag fa-lg"></i>
                         </span>
-                        <span class="title">Payment</span>
+                        <span class="title">Brands</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('brand.create') }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-droplet fa-lg"></i>
+                        </span>
+                        <span class="title">Colors</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('brand.create') }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-layer-group fa-lg"></i>
+                        </span>
+                        <span class="title">Units</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{{ route('brand.create') }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-cart-flatbed-suitcase fa-lg"></i>
+                        </span>
+                        <span class="title">Purchaes</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{ route('brand.create') }}">
+                        <span class="icon">
+                            <i class="fa-solid fa-truck-field fa-lg"></i>
+                        </span>
+                        <span class="title">Suppliers</span>
                     </a>
                 </li>
                 <li class="">
@@ -67,13 +100,22 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="{{url('/admin/bundle')}}">
+                    <a href="{{ route('brand.create') }}">
                         <span class="icon">
-                            <i class="fa-solid fa-layer-group fa-lg"></i>
+                            <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
                         </span>
-                        <span class="title">Bundle</span>
+                        <span class="title">Sales</span>
                     </a>
                 </li>
+                <li class="">
+                    <a href="">
+                        <span class="icon">
+                            <i class="fa-regular fa-credit-card fa-lg"></i>
+                        </span>
+                        <span class="title">Payment</span>
+                    </a>
+                </li>
+                
                 <li class="">
                     <a href="{{url('/admin/expense')}}">
                         <span class="icon">
@@ -96,22 +138,6 @@
                             <i class="fa-solid fa-house-circle-check fa-lg"></i>
                         </span>
                         <span class="title">Home</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-layer-group fa-lg"></i>
-                        </span>
-                        <span class="title">Service</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa-solid fa-hand-holding-medical fa-lg"></i>
-                        </span>
-                        <span class="title">Facilities</span>
                     </a>
                 </li>
                 <li class="">
