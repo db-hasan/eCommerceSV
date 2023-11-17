@@ -30,15 +30,11 @@
                     </div>
                     <hr>
                     <div class="row ">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label>Brand:</label>
                             <h6>{{$showData->brand_name}}</h6>
                         </div>
-                        <div class="col-md-4">
-                            <label>Unit:</label>
-                            <h6>{{$showData->unit_name}}</h6>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label>Color:</label>
                             <h6>{{$showData->color_name}}</h6>
                         </div>

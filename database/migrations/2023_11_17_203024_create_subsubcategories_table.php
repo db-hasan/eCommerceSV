@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('units', function (Blueprint $table) {
-            $table->bigIncrements('unit_id');
-            $table->string('unit_name',50)->nullable();
-            $table->integer('unit_status')->default(1);
+        Schema::create('subsubcategories', function (Blueprint $table) {
+            $table->bigIncrements('subsubcategory_id');
+            $table->string('subcategory_id',50)->nullable();
+            $table->string('subsubcategory_name',50)->nullable();
+            $table->integer('subsubcategory_status')->default(1);
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('subsubcategories');
     }
 };

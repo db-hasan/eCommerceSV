@@ -51,6 +51,14 @@
                     </a>
                 </li>
                 <li class="">
+                    <a href="{{ route('subsubcategory.index') }}">
+                        <span class="icon">
+                            <i class="fa-brands fa-docker fa-lg"></i>
+                        </span>
+                        <span class="title">SubSubCategory</span>
+                    </a>
+                </li>
+                <li class="">
                     <a href="{{ route('brand.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-tag fa-lg"></i>
@@ -64,14 +72,6 @@
                             <i class="fa-solid fa-droplet fa-lg"></i>
                         </span>
                         <span class="title">Colors</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="{{ route('unit.index') }}">
-                        <span class="icon">
-                            <i class="fa-brands fa-docker fa-lg"></i>
-                        </span>
-                        <span class="title">Units</span>
                     </a>
                 </li>
                 <li class="">

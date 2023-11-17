@@ -8,7 +8,6 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Brand;
-use App\Models\Unit;
 use App\Models\Color;
 use App\Models\Status;
 use Session;
@@ -19,7 +18,6 @@ class ProductController extends Controller
         $indexproduct = Product::join('categories', 'products.category_id', '=', 'categories.category_id')
                                 ->join('subcategories', 'products.subcategory_id', '=', 'subcategories.subcategory_id')
                                 ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
-                                ->join('units', 'products.unit_id', '=', 'units.unit_id')
                                 ->join('colors', 'products.color_id', '=', 'colors.color_id')
                                 ->join('statuses', 'products.product_status', '=', 'statuses.id')
                                 ->get();
@@ -30,7 +28,6 @@ class ProductController extends Controller
         $indexData['indexcategory']= Category::all();      
         $indexData['indexsubcategory']= Subcategory::all();      
         $indexData['indexbrand']= Brand::all();      
-        $indexData['indexunit']= Unit::all();      
         $indexData['indexcolor']= Color::all();      
         return view('backend/product/create', $indexData);
     }
@@ -39,7 +36,6 @@ class ProductController extends Controller
             'category_name' => 'required | max:50',
             'subcategory_name' => 'required | max:50',
             'brand_name' => 'required | max:50',
-            'unit_name' => 'required | max:50',
             'color_name' => 'required | max:50',
             'product_name' => 'required | max:50',
             'product_des' => 'required | max:50',
@@ -50,7 +46,6 @@ class ProductController extends Controller
             'category_name.required'=> 'Please enter category',
             'subcategory_name.required'=> 'Please enter sub category',
             'brand_name.required'=> 'Please enter brand',
-            'unit_name.required'=> 'Please enter unit',
             'color_name.required'=> 'Please enter color',
             'product_name.required'=> 'Please enter product',
             'product_des.required'=> 'Please enter decription',
@@ -66,7 +61,6 @@ class ProductController extends Controller
         $data->category_id= $request->category_name;
         $data->subcategory_id= $request->subcategory_name;
         $data->brand_id= $request->brand_name;
-        $data->unit_id= $request->unit_name;
         $data->color_id= $request->color_name;
         $data->product_name= $request->product_name;
         $data->product_des= $request->product_des;
@@ -82,7 +76,6 @@ class ProductController extends Controller
         $indexData['indexcategory']= Category::all();      
         $indexData['indexsubcategory']= Subcategory::all();      
         $indexData['indexbrand']= Brand::all();      
-        $indexData['indexunit']= Unit::all();      
         $indexData['indexcolor']= Color::all();
         $indexData['indexStatus']= Status::all();      
         return view('backend/product/edit', $indexData);
@@ -93,7 +86,6 @@ class ProductController extends Controller
             'category_name' => 'required | max:50',
             'subcategory_name' => 'required | max:50',
             'brand_name' => 'required | max:50',
-            'unit_name' => 'required | max:50',
             'color_name' => 'required | max:50',
             'product_name' => 'required | max:50',
             'product_des' => 'required | max:50',
@@ -104,7 +96,6 @@ class ProductController extends Controller
             'category_name.required'=> 'Please enter category',
             'subcategory_name.required'=> 'Please enter sub category',
             'brand_name.required'=> 'Please enter brand',
-            'unit_name.required'=> 'Please enter unit',
             'color_name.required'=> 'Please enter color',
             'product_name.required'=> 'Please enter product',
             'product_des.required'=> 'Please enter decription',
@@ -120,7 +111,6 @@ class ProductController extends Controller
         $data->category_id= $request->category_name;
         $data->subcategory_id= $request->subcategory_name;
         $data->brand_id= $request->brand_name;
-        $data->unit_id= $request->unit_name;
         $data->color_id= $request->color_name;
         $data->product_name= $request->product_name;
         $data->product_des= $request->product_des;
@@ -136,7 +126,6 @@ class ProductController extends Controller
         $showData = Product::join('categories', 'products.category_id', '=', 'categories.category_id')
                             ->join('subcategories', 'products.subcategory_id', '=', 'subcategories.subcategory_id')
                             ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
-                            ->join('units', 'products.unit_id', '=', 'units.unit_id')
                             ->join('colors', 'products.color_id', '=', 'colors.color_id')
                             ->join('statuses', 'products.product_status', '=', 'statuses.id')->find($product_id);
         return view('backend/product/show', compact('showData'));

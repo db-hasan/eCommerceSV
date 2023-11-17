@@ -36,7 +36,7 @@
         @enderror
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <label for="brand_name" class="form-label">Brand</label>
         <select class="form-select" aria-label="Default select example" id="brand_name" name="brand_name">
           <option value="">Sclect One</option>
@@ -49,20 +49,7 @@
         @enderror
       </div>
 
-      <div class="col-md-4">
-        <label for="unit_name" class="form-label">Unit</label>
-        <select class="form-select" aria-label="Default select example" id="unit_name" name="unit_name">
-          <option value="">Sclect One</option>
-          @foreach ($indexunit as $itemunit)
-          <option value="{{$itemunit->unit_id}}" {{ $indexData->unit_id == $itemunit->unit_id ? 'selected' : '' }}>{{$itemunit->unit_name}}</option>
-          @endforeach
-        </select>
-        @error('unit_name')
-            <span class="text-danger">{{ $message }}</span>
-        @enderror
-      </div>
-
-      <div class="col-md-4">
+      <div class="col-md-6">
         <label for="color_name" class="form-label">Color</label>
         <select class="form-select" aria-label="Default select example" id="color_name" name="color_name">
           <option value="">Sclect One</option>

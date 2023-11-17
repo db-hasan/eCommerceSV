@@ -9,7 +9,7 @@
                     <div class="d-flex justify-content-between">
                         <h4>All Data</h4>
                         <div class="text-end">
-                            <a href="{{ route('unit.index') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i> View Data</a>
+                            <a href="{{ route('subsubcategory.index') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i> View Data</a>
                         </div>
                     </div>
                 </div>
@@ -17,17 +17,24 @@
                     <div class="row ">
                         <div class="col-md-6">
                             <label>ID:</label>
-                            <h6>{{$showData->unit_id}}</h6>
+                            <h6>{{$showData->subsubcategory_id}}</h6>
                         </div>
                         <div class="col-md-6">
                             <label>Name:</label>
-                            <h6>{{$showData->unit_name}}</h6>
+                            <h6>{{$showData->subcategory_name}}</h6>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <label>ID:</label>
+                            <h6>{{$showData->subsubcategory_name}}</h6>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <div class="text-end">
-                        <a href="{{ route('unit.index') }}" class="btn btn-sm btn-dark">Close</a>
+                        <a href="{{ route('subsubcategory.index') }}" class="btn btn-sm btn-dark">Close</a>
                     </div>
                 </div>
             </div>

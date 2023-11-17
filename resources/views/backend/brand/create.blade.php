@@ -11,7 +11,7 @@
       @csrf
 
       <div class="col-md-6 pb-3">
-        <label for="brand_name" class="form-label">Bundle Name<span class="text-danger">*</span></label>
+        <label for="brand_name" class="form-label">Brand Name<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="brand_name" name="brand_name" value="{{old('bundle_name')}}">
         @error('brand_name')
             <span class="text-danger">{{ $message }}</span>

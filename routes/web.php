@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\SubcategoryController;
+use App\Http\Controllers\backend\SubSubCategoryController;
 use App\Http\Controllers\backend\BrandController;
 use App\Http\Controllers\backend\UnitController;
 use App\Http\Controllers\backend\ColorController;
@@ -13,9 +14,11 @@ use App\Http\Controllers\backend\SalesController;
 use App\Http\Controllers\backend\CustomerController;
 use App\Http\Controllers\backend\PaymentController;
 use App\Http\Controllers\backend\PromoController;
+use App\Http\Controllers\Website;
 
 
 // frontend route
+
 Route::get('/', function () {
     return view('frontend/home/home');
 });
@@ -23,6 +26,9 @@ Route::get('/product', function () {
     return view('frontend/product/product');
 });
 
+Route::get('/ajaxs', [Website::class,'index']);
+Route::post('/getState', [Website::class,'getState']);
+Route::post('/getCity', [Website::class,'getCity']);
 
 
 // backend route
@@ -62,6 +68,18 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('subsubcategory/index',[subsubcategoryController::class,'index'])->name('subsubcategory.index');
+    Route::get('subsubcategory/insert',[subsubcategoryController::class,'create'])->name('subsubcategory.create');
+    Route::post('subsubcategory/insert',[subsubcategoryController::class,'store'])->name('subsubcategory.store');
+    Route::get('subsubcategory/update/{subsubcategory_id}',[subsubcategoryController::class,'edit'])->name('subsubcategory.edit');
+    Route::post('subsubcategory/update/{subsubcategory_id}',[subsubcategoryController::class,'update'])->name('subsubcategory.update');
+    Route::get('subsubcategory/show/{subsubcategory_id}',[subsubcategoryController::class,'show'])->name('subsubcategory.show');
+    Route::get('subsubcategory/destroy/{subsubcategory_id}',[subsubcategoryController::class,'destroy'])->name('subsubcategory.destroy');
+});
+
+
+
+Route::middleware('auth')->group(function () {
     Route::get('brand/index',[BrandController::class,'index'])->name('brand.index');
     Route::get('brand/insert',[BrandController::class,'create'])->name('brand.create');
     Route::post('brand/insert',[BrandController::class,'store'])->name('brand.store');
@@ -79,16 +97,6 @@ Route::middleware('auth')->group(function () {
     Route::post('color/update/{color_id}',[ColorController::class,'update'])->name('color.update');
     Route::get('color/show/{color_id}',[ColorController::class,'show'])->name('color.show');
     Route::get('color/destroy/{color_id}',[ColorController::class,'destroy'])->name('color.destroy');
-});
-
-Route::middleware('auth')->group(function () {
-    Route::get('unit/index',[UnitController::class,'index'])->name('unit.index');
-    Route::get('unit/insert',[UnitController::class,'create'])->name('unit.create');
-    Route::post('unit/insert',[UnitController::class,'store'])->name('unit.store');
-    Route::get('unit/update/{unit_id}',[UnitController::class,'edit'])->name('unit.edit');
-    Route::post('unit/update/{unit_id}',[UnitController::class,'update'])->name('unit.update');
-    Route::get('unit/show/{unit_id}',[UnitController::class,'show'])->name('unit.show');
-    Route::get('unit/destroy/{unit_id}',[UnitController::class,'destroy'])->name('unit.destroy');
 });
 
 Route::middleware('auth')->group(function () {

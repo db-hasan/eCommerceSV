@@ -16,7 +16,6 @@
                     <th>Category</th>
                     <th>SubCategory</th>
                     <th>Brand</th>
-                    <th>Unit</th>
                     <th>Color</th>
                     <th>Name</th>
                     <th>Description</th>
@@ -33,7 +32,6 @@
                     <td>{{$itemproduct->category_name}}</td> 
                     <td>{{$itemproduct->subcategory_name}}</td> 
                     <td>{{$itemproduct->brand_name}}</td> 
-                    <td>{{$itemproduct->unit_name}}</td> 
                     <td>{{$itemproduct->color_name}}</td> 
                     <td>{{$itemproduct->product_name}}</td> 
                     <td>{{$itemproduct->product_des}}</td> 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Subcategory;
 use App\Models\Category;
 use App\Models\Status;
@@ -12,13 +13,14 @@ use Session;
 class SubcategoryController extends Controller
 {
     public function index() {
-        $indexsubcategory = Subcategory::join('statuses', 'subcategories.subcategory_status', '=', 'statuses.id')
+        $indexsubcategory = DB::table('subcategories')
+                                        ->join('statuses', 'subcategories.subcategory_status', '=', 'statuses.id')
                                         ->join('categories', 'subcategories.category_id', '=', 'categories.category_id')->get();
         return view('backend/subcategory/index', compact('indexsubcategory'));
     }
 
     public function create(){
-        $indexData['indexcategory']= Category::all();      
+        $indexData['indexcategory']= Category::all();
         return view('backend/subcategory/create', $indexData);
     }
     public function store(Request $request){
