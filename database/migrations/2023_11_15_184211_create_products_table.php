@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('product_name',50)->nullable();
             $table->string('product_des',255)->nullable();
             $table->string('product_sku',50)->nullable();
-            $table->string('img_id',50)->nullable();
+            $table->string('product_img',255)->nullable();
             $table->integer('product_status')->default(1);
             $table->timestamps();
         });

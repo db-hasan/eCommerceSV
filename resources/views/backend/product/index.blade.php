@@ -21,6 +21,7 @@
                     <th>Name</th>
                     <th>Description</th>
                     <th>SKU</th>
+                    <th>Images</th>
                     <th>Status</th>
                     <th class="ps-5">Action</th>
                 </tr>
@@ -37,6 +38,9 @@
                     <td>{{$itemproduct->product_name}}</td> 
                     <td>{{$itemproduct->product_des}}</td> 
                     <td>{{$itemproduct->product_sku}}</td> 
+                    <td>
+                        <img src="/images/{{$itemproduct->product_img}}" alt="Image not found" style="height: 40px; width: 40px;" class="rounded">
+                    </td> 
                     <td>{{$itemproduct->status_name}}</td> 
                     <td class="icons">
                         <a href="{{ route('product.show', $itemproduct->product_id) }}" type="button"  class="btn view"><i class="fa-solid fa-eye"></i></a>

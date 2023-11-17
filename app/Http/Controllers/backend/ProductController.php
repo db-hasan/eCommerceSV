@@ -44,6 +44,7 @@ class ProductController extends Controller
             'product_name' => 'required | max:50',
             'product_des' => 'required | max:50',
             'product_sku' => 'required | max:50',
+            'product_img' => 'required | max:255',
         ];
         $v_msg=[
             'category_name.required'=> 'Please enter category',
@@ -54,8 +55,12 @@ class ProductController extends Controller
             'product_name.required'=> 'Please enter product',
             'product_des.required'=> 'Please enter decription',
             'product_sku.required'=> 'Please enter product SKU',
+            'product_img.required'=> 'Please enter product image',
         ];
         $this -> validate($request, $rules, $v_msg);
+
+        $imageName = time().'.'. $request->product_img->extension();
+        $request->product_img->move(public_path('images'),$imageName);
 
         $data= new Product();
         $data->category_id= $request->category_name;
@@ -66,6 +71,7 @@ class ProductController extends Controller
         $data->product_name= $request->product_name;
         $data->product_des= $request->product_des;
         $data->product_sku= $request->product_sku;
+        $data->product_img= $imageName;
         $data->save();
         Session::flash('msg','Data submit successfully');
         return redirect()->route('product.index');
@@ -73,6 +79,11 @@ class ProductController extends Controller
 
     public function edit($product_id=null){
         $indexData['indexData'] = Product::find($product_id);
+        $indexData['indexcategory']= Category::all();      
+        $indexData['indexsubcategory']= Subcategory::all();      
+        $indexData['indexbrand']= Brand::all();      
+        $indexData['indexunit']= Unit::all();      
+        $indexData['indexcolor']= Color::all();
         $indexData['indexStatus']= Status::all();      
         return view('backend/product/edit', $indexData);
     }
@@ -87,6 +98,7 @@ class ProductController extends Controller
             'product_name' => 'required | max:50',
             'product_des' => 'required | max:50',
             'product_sku' => 'required | max:50',
+            'product_img' => 'required | max:255',
         ];
         $v_msg=[
             'category_name.required'=> 'Please enter category',
@@ -97,8 +109,12 @@ class ProductController extends Controller
             'product_name.required'=> 'Please enter product',
             'product_des.required'=> 'Please enter decription',
             'product_sku.required'=> 'Please enter product SKU',
+            'product_img.required'=> 'Please enter product image',
         ];
         $this -> validate($request, $rules, $v_msg);
+
+        $imageName = time().'.'. $request->product_img->extension();
+        $request->product_img->move(public_path('images'),$imageName);
 
         $data= Product::find($product_id);
         $data->category_id= $request->category_name;
@@ -109,6 +125,7 @@ class ProductController extends Controller
         $data->product_name= $request->product_name;
         $data->product_des= $request->product_des;
         $data->product_sku= $request->product_sku;
+        $data->product_img= $imageName;
         $data->product_status= $request->status;
         $data->save();
         Session::flash('msg','Data submit successfully');
@@ -116,7 +133,12 @@ class ProductController extends Controller
     }
 
     public function show($product_id=null){
-        $showData = Product::join('statuses', 'products.product_status', '=', 'statuses.id')->find($product_id);
+        $showData = Product::join('categories', 'products.category_id', '=', 'categories.category_id')
+                            ->join('subcategories', 'products.subcategory_id', '=', 'subcategories.subcategory_id')
+                            ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
+                            ->join('units', 'products.unit_id', '=', 'units.unit_id')
+                            ->join('colors', 'products.color_id', '=', 'colors.color_id')
+                            ->join('statuses', 'products.product_status', '=', 'statuses.id')->find($product_id);
         return view('backend/product/show', compact('showData'));
     }
 
