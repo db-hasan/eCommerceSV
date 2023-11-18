@@ -15,7 +15,7 @@ class SubSubCategoryController extends Controller
 
     public function index() {
         $indexsubsubcategory =Subsubcategory::join('statuses', 'subsubcategories.subsubcategory_status', '=', 'statuses.id')
-                                        ->join('subcategories', 'subsubcategories.subsubcategory_id', '=', 'subcategories.category_id')
+                                        ->join('subcategories', 'subsubcategories.subcategory_id', '=', 'subcategories.subcategory_id')
                                         ->get();
         return view('backend/subsubcategory/index', compact('indexsubsubcategory'));
     }
@@ -45,6 +45,7 @@ class SubSubCategoryController extends Controller
 
     public function edit($subsubcategory_id=null){
         $indexData['indexData'] = Subsubcategory::find($subsubcategory_id);
+        $indexData['indexsubcategory']=Subcategory::all();     
         $indexData['indexStatus']= Status::all();      
         return view('backend/subsubcategory/edit', $indexData);
     }

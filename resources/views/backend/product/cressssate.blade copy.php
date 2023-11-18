@@ -7,7 +7,7 @@
     </div>
     <hr>
     
-   <form method="post" action="{{ route('product.update', $indexData->product_id) }}" enctype="multipart/form-data" class="row g-3 p-3">
+    <form method="post" action="{{ route('product.store') }}" enctype="multipart/form-data" class="row g-3 p-3">
       @csrf
 
       <div class="col-md-4">
@@ -15,7 +15,7 @@
         <select class="form-select" aria-label="Default select example" name="category_name">
           <option value="">Sclect One</option>
           @foreach ($indexcategory as $itemcategory)
-          <option value="{{$itemcategory->category_id}}"{{ $indexData->category_id == $itemcategory->category_id ? 'selected' : '' }}>{{$itemcategory->category_name}}</option>
+          <option value="{{$itemcategory->category_id}}">{{$itemcategory->category_name}}</option>
           @endforeach
         </select>
         @error('category_name')
@@ -28,7 +28,7 @@
         <select class="form-select" aria-label="Default select example" name="subcategory_name">
           <option value="">Sclect One</option>
           @foreach ($indexsubcategory as $itemsubcategory)
-          <option value="{{$itemsubcategory->subcategory_id}}" {{ $indexData->subcategory_id == $itemsubcategory->subcategory_id ? 'selected' : '' }}>{{$itemsubcategory->subcategory_name}}</option>
+          <option value="{{$itemsubcategory->subcategory_id}}">{{$itemsubcategory->subcategory_name}}</option>
           @endforeach
         </select>
         @error('subcategory_name')
@@ -40,10 +40,10 @@
         <select class="form-select" aria-label="Default select example" name="subsubcategory_name">
           <option value="">Sclect One</option>
           @foreach ($indexsubsubcategory as $itemsubsubcategory)
-          <option value="{{$itemsubsubcategory->subsubcategory_id}}" {{ $indexData->subsubcategory_id == $itemsubsubcategory->subsubcategory_id ? 'selected' : '' }}>{{$itemsubsubcategory->subsubcategory_name}}</option>
+          <option value="{{$itemsubsubcategory->subsubcategory_id}}">{{$itemsubsubcategory->subsubcategory_name}}</option>
           @endforeach
         </select>
-        @error('subcategory_name')
+        @error('subsubcategory_name')
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
@@ -53,7 +53,7 @@
         <select class="form-select" aria-label="Default select example" id="brand_name" name="brand_name">
           <option value="">Sclect One</option>
           @foreach ($indexbrand as $itembrand)
-          <option value="{{$itembrand->brand_id}}" {{ $indexData->brand_id == $itembrand->brand_id ? 'selected' : '' }}>{{$itembrand->brand_name}}</option>
+          <option value="{{$itembrand->brand_id}}">{{$itembrand->brand_name}}</option>
           @endforeach
         </select>
         @error('brand_name')
@@ -66,7 +66,7 @@
         <select class="form-select" aria-label="Default select example" id="color_name" name="color_name">
           <option value="">Sclect One</option>
           @foreach ($indexcolor as $itemcolor)
-          <option value="{{$itemcolor->color_id}}" {{ $indexData->color_id == $itemcolor->color_id ? 'selected' : '' }}>{{$itemcolor->color_name}}</option>
+          <option value="{{$itemcolor->color_id}}">{{$itemcolor->color_name}}</option>
           @endforeach
         </select>
         @error('color_name')
@@ -74,44 +74,30 @@
         @enderror
       </div>
 
-      <div class="col-md-4 pb-3">
+      <div class="col-md-3 pb-3">
         <label for="product_name" class="form-label">Product Name<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="product_name" name="product_name" value="{{$indexData->product_name}}">
+        <input type="text" class="form-control" id="product_name" name="product_name" value="{{old('product_name')}}">
         @error('product_name')
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
-
-      <div class="col-md-4 pb-3">
+      <div class="col-md-6 pb-3">
+        <label for="product_des" class="form-label">Product Description<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="product_des" name="product_des" value="{{old('product_des')}}">
+        @error('product_des')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+      <div class="col-md-3 pb-3">
         <label for="product_sku" class="form-label">Product SKU<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="product_sku" name="product_sku" value="{{$indexData->product_sku}}">
+        <input type="text" class="form-control" id="product_sku" name="product_sku" value="{{old('product_sku')}}">
         @error('product_sku')
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
 
       <div class="col-md-4">
-        <label for="inputPassword4" class="form-label">Status</label>
-        <select class="form-select" aria-label="Default select example" name="status">
-          @foreach ($indexStatus as $itemStatus)
-          <option value="{{$itemStatus->id}}" {{ $indexData->promo_status == $itemStatus->id ? 'selected' : '' }} >{{$itemStatus->status_name}}</option>
-          @endforeach
-        </select>
-        @error('status')
-            <span class="text-danger">{{ $message }}</span>
-        @enderror
-      </div>
-
-      <div class="col-md-12 pb-3">
-        <label for="product_des" class="form-label">Product Description<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="product_des" name="product_des" value="{{$indexData->product_des}}">
-        @error('product_des')
-            <span class="text-danger">{{ $message }}</span>
-        @enderror
-      </div>
-
-      <div class="col-md-4">
-        <input type="file" class="form-control" id="product_img" name="product_img" value="{{$indexData->product_img}}">
+        <input type="file" class="form-control" id="product_img" name="product_img" value="{{old('product_des')}}">
         @error('product_img')
             <span class="text-danger">{{ $message }}</span>
         @enderror
@@ -121,6 +107,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
+
 </div>
 
 @endsection

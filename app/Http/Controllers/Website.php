@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class Website extends Controller
 {
     public function index(Request $request){
-		$data['country']=DB::table('country')->orderBy('country','asc')->get();
+		$data['countrsy']=DB::table('country')->orderBy('country','asc')->get();
 		return view('index',$data);
 	}
 	
@@ -21,14 +21,14 @@ class Website extends Controller
 		echo $html;
 	}
 	
-	public function getCity(Request $request){
-		$sid=$request->post('sid');
-		$city=DB::table('city')->where('state',$sid)->orderBy('city','asc')->get();
-		$html='<option value="">Select City</option>';
-		foreach($city as $list){
-			$html.='<option value="'.$list->id.'">'.$list->city.'</option>';
-		}
-		echo $html;
-	}
+	// public function getCity(Request $request){
+	// 	$sid=$request->post('sid');
+	// 	$city=DB::table('city')->where('state',$sid)->orderBy('city','asc')->get();
+	// 	$html='<option value="">Select City</option>';
+	// 	foreach($city as $list){
+	// 		$html.='<option value="'.$list->id.'">'.$list->city.'</option>';
+	// 	}
+	// 	echo $html;
+	// }
 }
 

@@ -26,9 +26,6 @@ Route::get('/product', function () {
     return view('frontend/product/product');
 });
 
-Route::get('/ajaxs', [Website::class,'index']);
-Route::post('/getState', [Website::class,'getState']);
-Route::post('/getCity', [Website::class,'getCity']);
 
 
 // backend route
@@ -98,6 +95,15 @@ Route::middleware('auth')->group(function () {
     Route::get('color/show/{color_id}',[ColorController::class,'show'])->name('color.show');
     Route::get('color/destroy/{color_id}',[ColorController::class,'destroy'])->name('color.destroy');
 });
+
+Route::get('/ajaxs', [Website::class,'index']);
+Route::post('/getState', [Website::class,'getState']);
+Route::post('/getCity', [Website::class,'getCity']);
+
+Route::get('/category', [ProductController::class,'category']);
+Route::post('/subcategory', [ProductController::class,'subcategory']);
+Route::post('/subsubcategory', [ProductController::class,'subsubcategory']);
+Route::post('/testproduct/store', [ProductController::class,'store']);
 
 Route::middleware('auth')->group(function () {
     Route::get('product/index',[ProductController::class,'index'])->name('product.index');

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel 8 Country State City Dropdown</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> --}}
   </head>
   <body>
     
@@ -16,7 +16,7 @@
 
 		<select id="country" class="form-control" >
 			<option value="">Select Country</option>
-			@foreach($country as $list)
+			@foreach($countrsy as $list)
 				<option value="{{$list->id}}">{{$list->country}}</option>
 			@endforeach
 		</select>
@@ -36,7 +36,7 @@
 	  </form>
 	</div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 
 		<script>
@@ -54,17 +54,17 @@
 				});
 			});
 			
-			jQuery('#state').change(function(){
-				let sid=jQuery(this).val();
-				jQuery.ajax({
-					url:'/getCity',
-					type:'post',
-					data:'sid='+sid+'&_token={{csrf_token()}}',
-					success:function(result){
-						jQuery('#city').html(result)
-					}
-				});
-			});
+			// jQuery('#state').change(function(){
+			// 	let sid=jQuery(this).val();
+			// 	jQuery.ajax({
+			// 		url:'/getCity',
+			// 		type:'post',
+			// 		data:'sid='+sid+'&_token={{csrf_token()}}',
+			// 		success:function(result){
+			// 			jQuery('#city').html(result)
+			// 		}
+			// 	});
+			// });
 			
 		});
 			

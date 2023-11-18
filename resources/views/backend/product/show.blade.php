@@ -15,37 +15,42 @@
                 </div>
                 <div class="card-body">
                     <div class="row ">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>ID:</label>
                             <h6>{{$showData->product_id}}</h6>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-3">
                             <label>Category:</label>
                             <h6>{{$showData->category_name}}</h6>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-3">
                             <label>SubCategory:</label>
                             <h6>{{$showData->subcategory_name}}</h6>
                         </div>
+                        <div class="col-md-3">
+                            <label>SubSubCategory:</label>
+                            <h6>{{$showData->subsubcategory_name}}</h6>
+                        </div>
                     </div>
                     <hr>
                     <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label>Brand:</label>
                             <h6>{{$showData->brand_name}}</h6>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label>Color:</label>
                             <h6>{{$showData->color_name}}</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Product name:</label>
+                            <h6>{{$showData->product_name}}</h6>
                         </div>
                     </div>
                     <hr>
                     <div class="row ">
-                        <div class="col-md-4">
-                            <label>Product name:</label>
-                            <h6>{{$showData->product_name}}</h6>
-                        </div>
-                        <div class="col-md-8">
+                        
+                        <div class="col-md-12">
                             <label>Description:</label>
                             <h6>{{$showData->product_des}}</h6>
                         </div>

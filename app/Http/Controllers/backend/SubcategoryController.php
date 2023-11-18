@@ -23,24 +23,24 @@ class SubcategoryController extends Controller
         $indexData['indexcategory']= Category::all();
         return view('backend/subcategory/create', $indexData);
     }
-    public function store(Request $request){
-        $rules = [
-            'category_name' => 'required | max:50',
-            'subcategory_name' => 'required | max:50',
-        ];
-        $v_msg=[
-            'category_name.required'=> 'Please enter Name',
-            'subcategory_name.required'=> 'Please enter Name',
-        ];
-        $this -> validate($request, $rules, $v_msg);
+    // public function store(Request $request){
+    //     $rules = [
+    //         'category_name' => 'required | max:50',
+    //         'subcategory_name' => 'required | max:50',
+    //     ];
+    //     $v_msg=[
+    //         'category_name.required'=> 'Please enter Name',
+    //         'subcategory_name.required'=> 'Please enter Name',
+    //     ];
+    //     $this -> validate($request, $rules, $v_msg);
 
-        $data= new Subcategory();
-        $data->category_id= $request->category_name;
-        $data->subcategory_name= $request->subcategory_name;
-        $data->save();
-        Session::flash('msg','Data submit successfully');
-        return redirect()->route('subcategory.index');
-    }
+    //     $data= new Subcategory();
+    //     $data->category_id= $request->category_name;
+    //     $data->subcategory_name= $request->subcategory_name;
+    //     $data->save();
+    //     Session::flash('msg','Data submit successfully');
+    //     return redirect()->route('subcategory.index');
+    // }
 
     public function edit($subcategory_id=null){
         $indexData['indexData'] = Subcategory::find($subcategory_id);

@@ -15,6 +15,7 @@
                     <th>ID</th>
                     <th>Category</th>
                     <th>SubCategory</th>
+                    <th>SubSubCategory</th>
                     <th>Brand</th>
                     <th>Color</th>
                     <th>Name</th>
@@ -31,6 +32,7 @@
                     <td>{{$itemproduct->product_id}}</td> 
                     <td>{{$itemproduct->category_name}}</td> 
                     <td>{{$itemproduct->subcategory_name}}</td> 
+                    <td>{{$itemproduct->subsubcategory_name}}</td> 
                     <td>{{$itemproduct->brand_name}}</td> 
                     <td>{{$itemproduct->color_name}}</td> 
                     <td>{{$itemproduct->product_name}}</td> 
