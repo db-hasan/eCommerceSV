@@ -123,4 +123,36 @@
     </form>
 </div>
 
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('#category').change(function(){
+				let cate_id=jQuery(this).val();
+				jQuery('#subsubcategory').html('<option value="">Select City</option>')
+				jQuery.ajax({
+					url:'/subcategory',
+					type:'post',
+					data:'cate_id='+cate_id+'&_token={{csrf_token()}}',
+					success:function(result){
+						jQuery('#subcategory').html(result)
+					}
+				});
+			});
+			
+			jQuery('#subcategory').change(function(){
+				let sub_id=jQuery(this).val();
+				jQuery.ajax({
+					url:'/subsubcategory',
+					type:'post',
+					data:'sub_id='+sub_id+'&_token={{csrf_token()}}',
+					success:function(result){
+						jQuery('#subsubcategory').html(result)
+					}
+				});
+			});
+			
+		});
+	</script> --}}
+
 @endsection

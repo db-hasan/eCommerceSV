@@ -108,6 +108,9 @@ Route::post('/testproduct/store', [ProductController::class,'store']);
 Route::middleware('auth')->group(function () {
     Route::get('product/index',[ProductController::class,'index'])->name('product.index');
     Route::get('product/insert',[ProductController::class,'create'])->name('product.create');
+    Route::post('/subcategory', [ProductController::class,'subcategory']);
+    Route::post('/subsubcategory', [ProductController::class,'subsubcategory']);
+    
     Route::post('product/insert',[ProductController::class,'store'])->name('product.store');
     Route::get('product/update/{product_id}',[ProductController::class,'edit'])->name('product.edit');
     Route::post('product/update/{product_id}',[ProductController::class,'update'])->name('product.update');
