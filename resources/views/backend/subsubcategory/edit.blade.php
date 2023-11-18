@@ -21,6 +21,7 @@
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
+      
 
       <div class="col-md-6 ">
         <label for="subsubcategory_name" class="form-label">SubSubCatagory<span class="text-danger">*</span></label>
