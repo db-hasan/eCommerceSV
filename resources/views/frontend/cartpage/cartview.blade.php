@@ -2,55 +2,6 @@
 
 @section('content')
 
-
-
-{{-- <script>
-    $(document).ready(function () {
-        // Listen for changes in quantity inputs
-        $('.quantity-input').on('input', function () {
-            const $input = $(this);
-            const $item = $input.closest('.item');
-            const quantity = parseInt($input.val()) || 0;
-            const price = parseInt($item.find('.price').text().replace('$', ''));
-            const total = price * quantity;
-            $item.find('.total').text('$' + total);
-
-            calculateTotal();
-        });
-
-        $('.decrease-quantity').click(function () {
-            const $input = $(this).next('.quantity-input');
-            let quantity = parseInt($input.val()) || 0;
-            quantity = Math.max(0, quantity - 1);
-            $input.val(quantity).trigger('input');
-        });
-
-        $('.increase-quantity').click(function () {
-            const $input = $(this).prev('.quantity-input');
-            let quantity = parseInt($input.val()) || 0;
-            quantity += 1;
-            $input.val(quantity).trigger('input');
-        });
-
-        $('.remove-item').click(function (e) {
-            e.preventDefault();
-            $(this).closest('.item').remove();
-            calculateTotal();
-        });
-    });
-
-    function calculateTotal() {
-        let total = 0;
-        $('.total').each(function () {
-            total += parseInt($(this).text().replace('$', ''));
-        });
-        $('#grandTotal').text('$' + total);
-    }
-</script> --}}
-
-
-
-
 <section class="content" style="background-color: #eee;">
     <div class="row py-3">
         <div class="col-8">
@@ -168,10 +119,6 @@
         </div>
     </div>
 </section>
-
-
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

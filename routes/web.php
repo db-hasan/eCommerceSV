@@ -28,13 +28,11 @@ Route::get('/product', function () {
     return view('frontend/product/product');
 });
 Route::get('/cart', function () {
-    return view('frontend/product/product');
+    return view('frontend/cartpage/cartview');
 });
 Route::get('/cartview', function () {
     return view('frontend/cartpage/cartview');
 });
-
-
 
 // backend route
 
