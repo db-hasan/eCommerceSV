@@ -14,14 +14,16 @@ use App\Http\Controllers\backend\SalesController;
 use App\Http\Controllers\backend\CustomerController;
 use App\Http\Controllers\backend\PaymentController;
 use App\Http\Controllers\backend\PromoController;
-use App\Http\Controllers\Website;
+
+
+use App\Http\Controllers\frontend\HomeController;
 
 
 // frontend route
 
-Route::get('/', function () {
-    return view('frontend/home/home');
-});
+Route::get('/',[HomeController::class,'home']);
+Route::get('/singelcategory/{cata_id}',[HomeController::class,'singelcategory']);
+
 Route::get('/product', function () {
     return view('frontend/product/product');
 });
