@@ -48,7 +48,7 @@
         @enderror
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-3">
         <label for="brand_name" class="form-label">Brand</label>
         <select class="form-select" aria-label="Default select example" id="brand_name" name="brand_name">
           <option value="">Sclect One</option>
@@ -61,7 +61,7 @@
         @enderror
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-3">
         <label for="color_name" class="form-label">Color</label>
         <select class="form-select" aria-label="Default select example" id="color_name" name="color_name">
           <option value="">Sclect One</option>
@@ -74,7 +74,7 @@
         @enderror
       </div>
 
-      <div class="col-md-4 pb-3">
+      <div class="col-md-6 pb-3">
         <label for="product_name" class="form-label">Product Name<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="product_name" name="product_name" value="{{$indexData->product_name}}">
         @error('product_name')
@@ -82,7 +82,22 @@
         @enderror
       </div>
 
-      <div class="col-md-4 pb-3">
+      <div class="col-md-3 pb-3">
+        <label for="buying_price" class="form-label">Buying Price<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="product_sku" name="buying_price" value="{{$indexData->buying_price}}">
+        @error('buying_price')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+      <div class="col-md-3 pb-3">
+        <label for="selling_price" class="form-label">Selling Price<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="selling_price" name="selling_price" value="{{$indexData->selling_price}}">
+        @error('selling_price')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+
+      <div class="col-md-3 pb-3">
         <label for="product_sku" class="form-label">Product SKU<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="product_sku" name="product_sku" value="{{$indexData->product_sku}}">
         @error('product_sku')
@@ -90,11 +105,11 @@
         @enderror
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <label for="inputPassword4" class="form-label">Status</label>
         <select class="form-select" aria-label="Default select example" name="status">
           @foreach ($indexStatus as $itemStatus)
-          <option value="{{$itemStatus->id}}" {{ $indexData->promo_status == $itemStatus->id ? 'selected' : '' }} >{{$itemStatus->status_name}}</option>
+          <option value="{{$itemStatus->id}}" {{ $indexData->product_status == $itemStatus->id ? 'selected' : '' }} >{{$itemStatus->status_name}}</option>
           @endforeach
         </select>
         @error('status')

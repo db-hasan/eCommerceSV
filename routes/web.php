@@ -74,8 +74,6 @@ Route::middleware('auth')->group(function () {
     Route::get('subsubcategory/destroy/{subsubcategory_id}',[subsubcategoryController::class,'destroy'])->name('subsubcategory.destroy');
 });
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('brand/index',[BrandController::class,'index'])->name('brand.index');
     Route::get('brand/insert',[BrandController::class,'create'])->name('brand.create');
@@ -99,6 +97,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('product/index',[ProductController::class,'index'])->name('product.index');
     Route::get('product/insert',[ProductController::class,'create'])->name('product.create');
+    
     Route::post('/subcategory', [ProductController::class,'subcategory']);
     Route::post('/subsubcategory', [ProductController::class,'subsubcategory']);
     

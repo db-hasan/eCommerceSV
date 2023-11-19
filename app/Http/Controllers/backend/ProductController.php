@@ -62,7 +62,9 @@ class ProductController extends Controller
                 'brand_name' => 'required | max:50',
                 'color_name' => 'required | max:50',
                 'product_name' => 'required | max:50',
-                'product_des' => 'required | max:50',
+                'product_des' => 'required | max:255',
+                'buying_price' => 'required | max:50',
+                'selling_price' => 'required | max:50',
                 'product_sku' => 'required | max:50',
                 'product_img' => 'required | max:255',
 
@@ -76,6 +78,8 @@ class ProductController extends Controller
                 'color_name.required'=> 'Please enter color',
                 'product_name.required'=> 'Please enter product',
                 'product_des.required'=> 'Please enter decription',
+                'buying_price.required'=> 'Please enter product Buying Price',
+                'selling_price.required'=> 'Please enter product Selling Price',
                 'product_sku.required'=> 'Please enter product SKU',
                 'product_img.required'=> 'Please enter product image',
             ];
@@ -92,6 +96,8 @@ class ProductController extends Controller
             $data->color_id= $request->color_name;
             $data->product_name= $request->product_name;
             $data->product_des= $request->product_des;
+            $data->buying_price= $request->buying_price;
+            $data->selling_price= $request->selling_price;
             $data->product_sku= $request->product_sku;
             $data->product_img= $imageName;
             $data->save();
@@ -118,7 +124,9 @@ class ProductController extends Controller
                 'brand_name' => 'required | max:50',
                 'color_name' => 'required | max:50',
                 'product_name' => 'required | max:50',
-                'product_des' => 'required | max:50',
+                'product_des' => 'required | max:255',
+                'buying_price' => 'required | max:50',
+                'selling_price' => 'required | max:50',
                 'product_sku' => 'required | max:50',
                 'product_img' => 'required | max:255',
             ];
@@ -130,6 +138,8 @@ class ProductController extends Controller
                 'color_name.required'=> 'Please enter color',
                 'product_name.required'=> 'Please enter product',
                 'product_des.required'=> 'Please enter decription',
+                'buying_price.required'=> 'Please enter product Buying Price',
+                'selling_price.required'=> 'Please enter product Selling Price',
                 'product_sku.required'=> 'Please enter product SKU',
                 'product_img.required'=> 'Please enter product image',
             ];
@@ -146,6 +156,8 @@ class ProductController extends Controller
             $data->color_id= $request->color_name;
             $data->product_name= $request->product_name;
             $data->product_des= $request->product_des;
+            $data->buying_price= $request->buying_price;
+            $data->selling_price= $request->selling_price;
             $data->product_sku= $request->product_sku;
             $data->product_img= $imageName;
             $data->product_status= $request->status;

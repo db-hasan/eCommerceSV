@@ -42,7 +42,7 @@
         @enderror
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-3">
         <label for="brand_name" class="form-label">Brand</label>
         <select class="form-select" aria-label="Default select example" id="brand_name" name="brand_name">
           <option value="">Sclect One</option>
@@ -55,7 +55,7 @@
         @enderror
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-3">
         <label for="color_name" class="form-label">Color</label>
         <select class="form-select" aria-label="Default select example" id="color_name" name="color_name">
           <option value="">Sclect One</option>
@@ -68,27 +68,53 @@
         @enderror
       </div>
 
-      <div class="col-md-3 pb-3">
+      <div class="col-md-6 pb-3">
         <label for="product_name" class="form-label">Product Name<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="product_name" name="product_name" value="{{old('product_name')}}">
         @error('product_name')
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
-      <div class="col-md-6 pb-3">
-        <label for="product_des" class="form-label">Product Description<span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="product_des" name="product_des" value="{{old('product_des')}}">
-        @error('product_des')
-            <span class="text-danger">{{ $message }}</span>
-        @enderror
-      </div>
-      <div class="col-md-3 pb-3">
+      
+
+      <div class="col-md-4 pb-3">
         <label for="product_sku" class="form-label">Product SKU<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="product_sku" name="product_sku" value="{{old('product_sku')}}">
         @error('product_sku')
             <span class="text-danger">{{ $message }}</span>
         @enderror
       </div>
+      <div class="col-md-4 pb-3">
+        <label for="buying_price" class="form-label">Buying Price<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="product_sku" name="buying_price" value="{{old('buying_price')}}">
+        @error('buying_price')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+      <div class="col-md-4 pb-3">
+        <label for="selling_price" class="form-label">Selling Price<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="selling_price" name="selling_price" value="{{old('selling_price')}}">
+        @error('selling_price')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+
+      
+
+      <div class="col-md-12 pb-3">
+        <label for="product_des" class="form-label">Product Description<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="product_des" name="product_des" value="{{old('product_des')}}">
+        @error('product_des')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div>
+
+      {{-- <div class="col-md-12 pb-3">
+        <textarea class="form-control" id="product_des" name="product_des" value="{{old('product_des')}}" style="height: 100px" placeholder="Product Description"></textarea>
+        @error('product_des')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+      </div> --}}
 
       <div class="col-md-4">
         <input type="file" class="form-control" id="product_img" name="product_img" value="{{old('product_des')}}">

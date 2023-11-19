@@ -20,6 +20,8 @@
                     <th>Color</th>
                     <th>Name</th>
                     <th>Description</th>
+                    <th>Buying_Price</th>
+                    <th>Selling_Price</th>
                     <th>SKU</th>
                     <th>Images</th>
                     <th>Status</th>
@@ -37,7 +39,9 @@
                     <td>{{$itemproduct->color_name}}</td> 
                     <td>{{$itemproduct->product_name}}</td> 
                     <td>{{$itemproduct->product_des}}</td> 
-                    <td>{{$itemproduct->product_sku}}</td> 
+                    <td>{{$itemproduct->buying_price}}</td> 
+                    <td>{{$itemproduct->selling_price}}</td>
+                    <td>{{$itemproduct->product_sku}}</td>
                     <td>
                         <img src="/images/{{$itemproduct->product_img}}" alt="Image not found" style="height: 40px; width: 40px;" class="rounded">
                     </td> 

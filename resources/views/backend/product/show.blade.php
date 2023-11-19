@@ -49,6 +49,25 @@
                     </div>
                     <hr>
                     <div class="row ">
+                        <div class="col-md-3">
+                            <label>Buying Price:</label>
+                            <h6>{{$showData->buying_price}}</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Selling Price:</label>
+                            <h6>{{$showData->selling_price}}</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Product SKU:</label>
+                            <h6>{{$showData->product_sku}}</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Product Status:</label>
+                            <h6>{{$showData->product_status}}</h6>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row ">
                         
                         <div class="col-md-12">
                             <label>Description:</label>
