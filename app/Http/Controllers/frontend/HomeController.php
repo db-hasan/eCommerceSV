@@ -20,7 +20,7 @@ class HomeController extends Controller
     public function home(){
 		$indexData['indexcategory']=Product::groupBy('category_id')->paginate(6);
 		$indexData['indexsubcategory']=Product::groupBy('subcategory_id')->paginate(6);
-        
+		$indexData['cateproduct']=Product::where('category_id',8)->paginate(6);
 		return view('frontend/home/home', $indexData);
 	}
 

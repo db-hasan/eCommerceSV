@@ -43,7 +43,7 @@
         </div>
 </div>
     
-
+{{-- Top Categories --}}
 <div class="content py-2">
     <div class="lavel">
         <div class="d-flex justify-content-between">
@@ -121,17 +121,15 @@
     </div>
 </div>
 
+{{-- Desktop start --}}
 <div class="content py-2 bg-light">
-    
     <div class="lavel">
         <div class="lavel_content_sm">
             <span class="">Desktop</span>
         </div>
     </div>
-
-    
     <div class="row g-2 pt-3">
-        @foreach ($indexcategory as $item)
+        @foreach ($indexsubcategory as $item)
         <div class="col">
             <div class="card h-100">
                 <img src="/images/{{$item->product_img}}" class="card-img-top" alt="...">
@@ -151,7 +149,7 @@
     </div>
 </div>
 
-
+{{-- Daily Life start --}}
 <div class="content py-2 bg-light">
     <div class="lavel">
         <div class="lavel_content_sm">
@@ -164,7 +162,7 @@
             <div class="card h-100">
                 <img src="/images/{{$item->product_img}}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">{{$item->product_name}}</a></h5>
+                    <h5 class="card-title"><a href="{{url ('singelcategory',$item->category_id)}}">{{$item->product_name}}</a></h5>
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">TK {{$item->selling_price}}</p>
                 </div>
@@ -179,7 +177,7 @@
     </div>
 </div>
 
-
+{{-- Education start --}}
 <div class="content py-2 bg-light">
     <div class="lavel">
         <div class="lavel_content_sm">
@@ -187,13 +185,14 @@
         </div>
     </div>
     <div class="row g-2 pt-3">
+        @foreach ($indexsubcategory as $item)
         <div class="col">
             <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
+                <img src="/images/{{$item->product_img}}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
+                    <h5 class="card-title"><a href="{{url ('singelcategory',$item->category_id)}}">{{$item->product_name}}</a></h5>
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
+                    <p class="card-text price">TK {{$item->selling_price}}</p>
                 </div>
                 <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
@@ -202,85 +201,11 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 
-
+{{-- Entertainment start --}}
 <div class="content py-2 bg-light">
     <div class="lavel">
         <div class="lavel_content_sm">
@@ -288,13 +213,14 @@
         </div>
     </div>
     <div class="row g-2 pt-3">
+        @foreach ($indexsubcategory as $item)
         <div class="col">
             <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
+                <img src="/images/{{$item->product_img}}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
+                    <h5 class="card-title"><a href="{{url ('singelcategory',$item->category_id)}}">{{$item->product_name}}</a></h5>
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
+                    <p class="card-text price">TK {{$item->selling_price}}</p>
                 </div>
                 <div class="d-flex justify-content-center py-2">
                     <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
@@ -303,84 +229,11 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://www.ryanscomputers.com/storage/products/small/intel-14th-gen-meteor-lake-core-i9-14900k-up-to-21697465288.webp" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><a href="">Card title</a></h5>
-                    <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
-                    <p class="card-text price">Tk 69,500</p>
-                </div>
-                <div class="d-flex justify-content-center py-2">
-                    <a class="px-2 cart" href=""target="_blank"><i class="fa-solid fa-cart-arrow-down fa-xl"></i></a>
-                    <a class="px-2 love" href=""target="_blank"><i class="fa-solid fa-heart fa-xl"></i></a>
-                    <a class="px-2 view" href="" target="_blank"><i class="fa-solid fa-eye fa-xl"></i></a>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 
+{{-- Top Brands start --}}
 <div class="content py-2">
     <div class="lavel">
         <div class="d-flex justify-content-between">

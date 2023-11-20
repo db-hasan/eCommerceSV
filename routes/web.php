@@ -24,9 +24,9 @@ use App\Http\Controllers\frontend\HomeController;
 Route::get('/',[HomeController::class,'home']);
 Route::get('/singelcategory/{cata_id}',[HomeController::class,'singelcategory']);
 
-Route::get('/product', function () {
-    return view('frontend/product/product');
-});
+// Route::get('/product', function () {
+//     return view('frontend/product/product');
+// });
 
 
 Route::get('/shopcart', function () {
