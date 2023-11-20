@@ -346,3 +346,25 @@ body {
 .form-check-input {
     margin-top: 0px !important;
 }
+
+/* cart Start */
+
+.cart-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 9999;
+    width: 350px;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cart-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

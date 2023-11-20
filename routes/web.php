@@ -27,8 +27,10 @@ Route::get('/singelcategory/{cata_id}',[HomeController::class,'singelcategory'])
 Route::get('/product', function () {
     return view('frontend/product/product');
 });
-Route::get('/cart', function () {
-    return view('frontend/cartpage/cartview');
+
+
+Route::get('/shopcart', function () {
+    return view('frontend/cartpage/shopcart');
 });
 Route::get('/cartview', function () {
     return view('frontend/cartpage/cartview');
