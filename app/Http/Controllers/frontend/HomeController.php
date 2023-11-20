@@ -28,4 +28,8 @@ class HomeController extends Controller
 		$indexData['indexproduct']=Product::where('category_id',$cata_id)->get();
 	    return view('frontend/product/product',$indexData);
 	}
+
+	// public function viewproduct(){
+	// 	return view('frontend/home/home', $indexData);
+	// }
 }
