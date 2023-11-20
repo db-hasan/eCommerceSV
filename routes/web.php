@@ -28,6 +28,7 @@ Route::get('/viewproduct', function () {
     return view('frontend/product/viewproduct');
 });
 
+// Route::get('/viewproduct//{view_id}',[HomeController::class,'viewproduct']);
 
 Route::get('/shopcart', function () {
     return view('frontend/cartpage/shopcart');
