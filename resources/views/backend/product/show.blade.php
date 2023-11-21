@@ -76,10 +76,14 @@
                     </div>
                     <hr>
                     <div class="row ">
-                        <div class="col-md-4">
-                            <label>Images:</label>
-                            <h6>{{$showData->product_img}}</h6>
-                            <img src="/images/{{$showData->product_img}}" alt="Image not found" style="height: 100px; width: 100px;" class="rounded">
+                        <div class="col-md-4 d-flex">
+                            <div class="">
+                                <label>Images:</label>
+                                <h6>{{$showData->product_img}}</h6>
+                            </div>
+                            <div class="ps-2">
+                                <img src="/images/{{$showData->product_img}}" alt="Image not found" style="height: 100px; width: 100px;" class="rounded">
+                            </div>
                         </div>
                     </div>
                     

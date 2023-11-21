@@ -76,7 +76,6 @@
         @enderror
       </div>
       
-
       <div class="col-md-4 pb-3">
         <label for="product_sku" class="form-label">Product SKU<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="product_sku" name="product_sku" value="{{old('product_sku')}}">

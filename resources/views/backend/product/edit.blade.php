@@ -124,12 +124,19 @@
       </div>
                         
       <div class="col-md-4">
-        <input type="file" class="form-control" id="product_img" name="product_img" value="{{$indexData->product_img}}">
-        @error('product_img')
-            <span class="text-danger">{{ $message }}</span>
-        @enderror
+        <div class="d-flex">
+          <div class="">
+            <input type="file" class="form-control" id="product_img" name="product_img" value="{{$indexData->product_img}}">
+            @error('product_img')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
+          </div>
+         <div class=" ps-3">
+           <img src="/images/{{$indexData->product_img}}" alt="Image not found" style="height: 40px; width: 40px;" class="rounded">
+         </div>
+        </div>
       </div>
-      <img src="/images/{{$indexData->product_img}}" alt="Image not found" style="height: 40px; width: 40px;" class="rounded">
+      
 
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Submit</button>
