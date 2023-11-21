@@ -17,42 +17,42 @@ use Session;
 
 class ProductController extends Controller
 {
-    public function index() {
-        $indexproduct = Product::join('categories', 'products.category_id', '=', 'categories.category_id')
-                                ->join('subcategories', 'products.subcategory_id', '=', 'subcategories.subcategory_id')
-                                ->join('subsubcategories', 'products.subsubcategory_id', '=', 'subsubcategories.subsubcategory_id')
-                                ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
-                                ->join('colors', 'products.color_id', '=', 'colors.color_id')
-                                ->join('statuses', 'products.product_status', '=', 'statuses.id')
-                                ->get();
-        return view('backend/product/index', compact('indexproduct'));
-    }
+        public function index() {
+            $indexproduct = Product::join('categories', 'products.category_id', '=', 'categories.category_id')
+                                    ->join('subcategories', 'products.subcategory_id', '=', 'subcategories.subcategory_id')
+                                    ->join('subsubcategories', 'products.subsubcategory_id', '=', 'subsubcategories.subsubcategory_id')
+                                    ->join('brands', 'products.brand_id', '=', 'brands.brand_id')
+                                    ->join('colors', 'products.color_id', '=', 'colors.color_id')
+                                    ->join('statuses', 'products.product_status', '=', 'statuses.id')
+                                    ->get();
+            return view('backend/product/index', compact('indexproduct'));
+        }
     
-    public function create(Request $request){
-		$indexData['indexcategory']=Category::all();
-        $indexData['indexbrand']= Brand::all();      
-        $indexData['indexcolor']= Color::all(); 
-		return view('backend/product/create', $indexData);
-	}
-    public function subcategory(Request $request){
-        $cate_id = $request->post('cate_id');//category id
-        $indexsubcategory = DB::table('subcategories')->where('category_id', $cate_id)->get();
-        $html = '<option value="">Select State</option>';
-        foreach($indexsubcategory as $itemsubcategory){
-            $html .= '<option value="'.$itemsubcategory->subcategory_id.'">'.$itemsubcategory->subcategory_name.'</option>';
+        public function create(Request $request){
+            $indexData['indexcategory']=Category::all();
+            $indexData['indexbrand']= Brand::all();      
+            $indexData['indexcolor']= Color::all(); 
+            return view('backend/product/create', $indexData);
         }
-        return $html;
-    }
+        public function subcategory(Request $request){
+            $cate_id = $request->post('cate_id');//category id
+            $indexsubcategory = DB::table('subcategories')->where('category_id', $cate_id)->get();
+            $html = '<option value="">Select State</option>';
+            foreach($indexsubcategory as $itemsubcategory){
+                $html .= '<option value="'.$itemsubcategory->subcategory_id.'">'.$itemsubcategory->subcategory_name.'</option>';
+            }
+            return $html;
+        }
 
-    public function subsubcategory(Request $request){
-        $sub_id = $request->post('sub_id'); //subcategory id
-        $indexsubsubcategory = DB::table('subsubcategories')->where('subcategory_id', $sub_id)->get();
-        $html = '<option value="">Select City</option>';
-        foreach ($indexsubsubcategory as $itemsubsubcategory){
-            $html .= '<option value="'.$itemsubsubcategory->subsubcategory_id.'">'.$itemsubsubcategory->subsubcategory_name.'</option>';
+        public function subsubcategory(Request $request){
+            $sub_id = $request->post('sub_id'); //subcategory id
+            $indexsubsubcategory = DB::table('subsubcategories')->where('subcategory_id', $sub_id)->get();
+            $html = '<option value="">Select City</option>';
+            foreach ($indexsubsubcategory as $itemsubsubcategory){
+                $html .= '<option value="'.$itemsubsubcategory->subsubcategory_id.'">'.$itemsubsubcategory->subsubcategory_name.'</option>';
+            }
+            return $html;
         }
-        return $html;
-    }
 
         public function store(Request $request){
             $rules = [
@@ -105,7 +105,7 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         }
 
-            public function edit($product_id=null){
+        public function edit($product_id=null){
             $indexData['indexData'] = Product::find($product_id);
             $indexData['indexcategory']= Category::all();      
             $indexData['indexsubcategory']= Subcategory::all();      
@@ -128,7 +128,6 @@ class ProductController extends Controller
                 'buying_price' => 'required | max:50',
                 'selling_price' => 'required | max:50',
                 'product_sku' => 'required | max:50',
-                'product_img' => 'required | max:255',
             ];
             $v_msg=[
                 'category_name.required'=> 'Please enter category',
@@ -141,12 +140,8 @@ class ProductController extends Controller
                 'buying_price.required'=> 'Please enter product Buying Price',
                 'selling_price.required'=> 'Please enter product Selling Price',
                 'product_sku.required'=> 'Please enter product SKU',
-                'product_img.required'=> 'Please enter product image',
             ];
             $this -> validate($request, $rules, $v_msg);
-
-            $imageName = time().'.'. $request->product_img->extension();
-            $request->product_img->move(public_path('images'),$imageName);
 
             $data= Product::find($product_id);
             $data->category_id= $request->category_name;
@@ -159,7 +154,11 @@ class ProductController extends Controller
             $data->buying_price= $request->buying_price;
             $data->selling_price= $request->selling_price;
             $data->product_sku= $request->product_sku;
-            $data->product_img= $imageName;
+            if ($request->hasFile('product_img')) {
+                $imageName = time().'.'.$request->product_img->extension();
+                $request->product_img->move(public_path('images'), $imageName);
+                $data->product_img = $imageName; // Update the image name
+            }
             $data->product_status= $request->status;
             $data->save();
             Session::flash('msg','Data submit successfully');
@@ -179,8 +178,19 @@ class ProductController extends Controller
 
         public function destroy($product_id=null){
             $destroyData = Product::find($product_id);
+
+            // Delete associated image file
+            if ($destroyData->product_img) {
+                $imagePath = public_path('images/') . $destroyData->product_img; // Path to the image file
+                if (file_exists($imagePath)) {
+                    unlink($imagePath); // Remove the image file from the directory
+                }
+            }
+
+            // Delete the product
             $destroyData->delete();
-            Session::flash('msg','Data delete successfully');
+
+            Session::flash('msg','Data deleted successfully');
             return redirect()->route('product.index');
         }
 }
