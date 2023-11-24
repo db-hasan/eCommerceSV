@@ -19,7 +19,7 @@
 }
 
 .btn_color {
-    background-color: var(--hover1) !important;
+    background-color: var(--hover) !important;
     border: none !important;
     color: var(--white) !important;
     font-weight: bold;
