@@ -146,7 +146,7 @@
                     </a>
                 </div>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 80%;">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 70%;">
                         <div class="modal-content">
    
                             <div class="d-flex justify-content-between p-3">
@@ -156,7 +156,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             
-                            <div class=" px-4">
+                            <div class=" px-4 pb-3">
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="vcolor ">
@@ -164,37 +164,37 @@
                                                 <div class="col-2">
                                                     <div class="pb-2">
                                                         <img src="/images/{{$item->product_img}}"
-                                                        class="img-fluid" alt="Cotton T-shirt">
+                                                        class="img-fluid" alt="Image not found">
                                                     </div>
                                                     <div class="pb-2">
                                                         <img src="/images/{{$item->product_img}}"
-                                                        class="img-fluid " alt="Cotton T-shirt">
+                                                        class="img-fluid " alt="Image not found">
                                                     </div>
                                                     <div class="pb-2">
                                                         <img src="/images/{{$item->product_img}}"
-                                                        class="img-fluid " alt="Cotton T-shirt">
+                                                        class="img-fluid " alt="Image not found">
                                                     </div>
                                                     <div class="pb-2">
                                                         <img src="/images/{{$item->product_img}}"
-                                                        class="img-fluid " alt="Cotton T-shirt">
+                                                        class="img-fluid " alt="Image not found">
                                                     </div>
                                                     <div class="pb-2">
                                                         <img src="/images/{{$item->product_img}}"
-                                                        class="img-fluid " alt="Cotton T-shirt">
+                                                        class="img-fluid " alt="Image not found">
                                                     </div>
                                                     
                                                 </div>
                                                 <div class="col-10 pt-4">
                                                     <div class="text-center ">
                                                         <img src="/images/{{$item->product_img}}"
-                                                            class="img-fluid" alt="Cotton T-shirt">
+                                                            class="img-fluid" alt="Image not found">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6 vcolor">
-                                        <div class="py-3">
+                                        <div class="pb-3">
                                             <p>HP 15s-fq3617TU Intel CDC N4500 4GB RAM 256GB SSD 15.6 Inch FHD Display Silver Laptop</p>
                                         </div>
                                         <div class="d-flex ">
@@ -210,7 +210,7 @@
                                             <li> Monthly EMI Tk. <span></span></li>
                                         </ul>
                                         
-                                        <button type="button" class="btn btn-outline-success mb-2">Add to Cart</button>
+                                        <button type="button" class="btn-sm btn_color mb-2 py-1 px-2">Add to Cart</button>
 
                                         <div class="details">
                                             <p>Quick Overview</p>
