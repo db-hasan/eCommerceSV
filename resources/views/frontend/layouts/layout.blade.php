@@ -48,20 +48,9 @@
                         <div class="input-group" style="width: 100%;">
                             <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">All</button>
                             <ul class="dropdown-menu custom-scrollbar" style="width: 200px;">
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Laptop</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Desktop and Server</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Gaming</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Tablet PC</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Printer</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Camera</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Security System</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Network</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Sound System</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Office Items</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Accessories</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Software</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Daily Life</a></li>
-                                <li class="dropdown-item"><a class="dropdown-link" href="#">Store</a></li>
+                                {{-- @foreach ($category as $items)
+                                    <li class="dropdown-item"><a class="dropdown-link" href="#">{{$items->category_name}}</a></li>
+                                @endforeach --}}
                             </ul>
                             <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
                             <button class="btn btn-light search_btn px-3" type="button" >

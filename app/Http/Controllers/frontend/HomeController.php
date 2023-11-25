@@ -20,16 +20,18 @@ class HomeController extends Controller
     public function home(){
 		$indexData['indexcategory']=Product::groupBy('category_id')->paginate(6);
 		$indexData['indexsubcategory']=Product::groupBy('subcategory_id')->paginate(6);
-		$indexData['cateproduct']=Product::where('category_id',8)->paginate(6);
+		$indexData['subcategory'] = Product::join('subcategories', 'subcategories.subcategory_id', '=', 'products.subcategory_id')
+											->where('products.category_id', 8) // Specify the table for category_id
+											->paginate(6);
+
 		return view('frontend/home/home', $indexData);
-	}
+	}	
+
 
     public function singelcategory($cata_id){
+		// $indexData['category']=Category::all();
 		$indexData['indexproduct']=Product::where('category_id',$cata_id)->get();
 	    return view('frontend/product/product',$indexData);
 	}
-    // public function wiewproduct($view_id){
-	// 	$indexData['wiewproduct']=Product::where('category_id',$view_id)->get();
-	//     return view('frontend/product/viewproduct',$indexData);
-	// }
+
 }

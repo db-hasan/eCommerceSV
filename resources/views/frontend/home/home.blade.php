@@ -244,12 +244,12 @@
         </div>
     </div>
     <div class="row g-2 pt-3">
-        @foreach ($indexsubcategory as $item)
+        @foreach ($subcategory as $item)
         <div class="col">
             <div class="card h-100">
                 <img src="/images/{{$item->product_img}}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title"><a href="{{url ('singelcategory',$item->category_id)}}">{{$item->product_name}}</a></h5>
+                    <h5 class="card-title"><a href="{{url ('singelcategory',$item->subcategory_id)}}">{{$item->subcategory_name}}</a></h5>
                     <p class="card-text des"><a href="">Intel 14th Gen Raptor Lake Refresh Core i9 14 ...</a></p>
                     <p class="card-text price">TK {{$item->selling_price}}</p>
                 </div>
