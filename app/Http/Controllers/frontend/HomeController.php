@@ -21,7 +21,7 @@ class HomeController extends Controller
 		$indexData['indexcategory']=Product::groupBy('category_id')->paginate(6);
 		$indexData['indexsubcategory']=Product::groupBy('subcategory_id')->paginate(6);
 		$indexData['subcategory'] = Product::join('subcategories', 'subcategories.subcategory_id', '=', 'products.subcategory_id')
-											->where('products.category_id', 8) // Specify the table for category_id
+											->where('products.category_id', 11) // Specify the table for category_id
 											->paginate(6);
 
 		return view('frontend/home/home', $indexData);
