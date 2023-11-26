@@ -48,9 +48,19 @@
                         <div class="input-group" style="width: 100%;">
                             <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">All</button>
                             <ul class="dropdown-menu custom-scrollbar" style="width: 200px;">
-                                {{-- @foreach ($category as $items)
-                                    <li class="dropdown-item"><a class="dropdown-link" href="#">{{$items->category_name}}</a></li>
-                                @endforeach --}}
+                                <li class="nav-item"><a class="nav-link" href="#">Laptop</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Desktop</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Gaming</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Tablet PC</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Printer</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Camera</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Security System</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Network</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Sound System</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Office Items</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Software</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Daily Life</a></li>
                             </ul>
                             <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
                             <button class="btn btn-light search_btn px-3" type="button" >
