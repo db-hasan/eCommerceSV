@@ -77,6 +77,14 @@ body {
     background-color: #343a40 !important;
 }
 
+.search ul li {
+    padding: 5px;
+}
+
+.search ul li a {
+    margin-left: 10px;
+}
+
 .search ul li:hover {
     background-color: #4098ef !important;
 }
