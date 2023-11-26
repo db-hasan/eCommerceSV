@@ -84,7 +84,7 @@
                 </li>
 
                 <li class="">
-                    <a href="{{ route('brand.index') }}">
+                    <a href="{{ route('purchaes.index') }}">
                         <span class="icon">
                             <i class="fa-solid fa-cart-flatbed-suitcase fa-lg"></i>
                         </span>

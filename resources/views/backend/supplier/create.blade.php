@@ -18,7 +18,7 @@
         @enderror
       </div>
       <div class="col-md-6 pb-3">
-        <label for="supplier_phone" class="form-label">Supplier Name<span class="text-danger">*</span></label>
+        <label for="supplier_phone" class="form-label">Supplier Number<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="supplier_phone" name="supplier_phone" value="{{old('supplier_phone')}}">
         @error('supplier_phone')
             <span class="text-danger">{{ $message }}</span>

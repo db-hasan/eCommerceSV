@@ -118,6 +118,17 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('promo/index',[promoController::class,'index'])->name('promo.index');
+    Route::get('promo/insert',[promoController::class,'create'])->name('promo.create');
+    Route::post('promo/insert',[promoController::class,'store'])->name('promo.store');
+    Route::get('promo/update/{promo_id}',[promoController::class,'edit'])->name('promo.edit');
+    Route::post('promo/update/{promo_id}',[promoController::class,'update'])->name('promo.update');
+    Route::get('promo/show/{promo_id}',[promoController::class,'show'])->name('promo.show');
+    Route::get('promo/destroy/{promo_id}',[promoController::class,'destroy'])->name('promo.destroy');
+});
+
+
+Route::middleware('auth')->group(function () {
     Route::get('supplier/index',[SupplierController::class,'index'])->name('supplier.index');
     Route::get('supplier/insert',[SupplierController::class,'create'])->name('supplier.create');
     Route::post('supplier/insert',[SupplierController::class,'store'])->name('supplier.store');
@@ -128,14 +139,15 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('promo/index',[promoController::class,'index'])->name('promo.index');
-    Route::get('promo/insert',[promoController::class,'create'])->name('promo.create');
-    Route::post('promo/insert',[promoController::class,'store'])->name('promo.store');
-    Route::get('promo/update/{promo_id}',[promoController::class,'edit'])->name('promo.edit');
-    Route::post('promo/update/{promo_id}',[promoController::class,'update'])->name('promo.update');
-    Route::get('promo/show/{promo_id}',[promoController::class,'show'])->name('promo.show');
-    Route::get('promo/destroy/{promo_id}',[promoController::class,'destroy'])->name('promo.destroy');
+    Route::get('purchaes/index',[purchaesController::class,'index'])->name('purchaes.index');
+    Route::get('purchaes/insert',[purchaesController::class,'create'])->name('purchaes.create');
+    Route::post('purchaes/insert',[purchaesController::class,'store'])->name('purchaes.store');
+    Route::get('purchaes/update/{purchaes_id}',[purchaesController::class,'edit'])->name('purchaes.edit');
+    Route::post('purchaes/update/{purchaes_id}',[purchaesController::class,'update'])->name('purchaes.update');
+    Route::get('purchaes/show/{purchaes_id}',[purchaesController::class,'show'])->name('purchaes.show');
+    Route::get('purchaes/destroy/{purchaes_id}',[purchaesController::class,'destroy'])->name('purchaes.destroy');
 });
+
 
 
 require __DIR__.'/auth.php';

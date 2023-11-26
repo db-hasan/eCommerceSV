@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('purchaes', function (Blueprint $table) {
             $table->bigIncrements('purchaes_id');
             $table->string('suppliers_id',50)->nullable();
+            $table->string('buying_price',50)->nullable();
+            $table->string('selling_price',50)->nullable();
+            $table->string('purchaes_quantity',50)->nullable();
             $table->integer('purchaes_status')->default(1);
             $table->timestamps();
         });

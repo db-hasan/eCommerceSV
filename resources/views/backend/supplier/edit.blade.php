@@ -11,7 +11,7 @@
       @csrf
 
       <div class="col-md-6 ">
-        <label for="supplier_name" class="form-label">supplier<span class="text-danger">*</span></label>
+        <label for="supplier_name" class="form-label">Supplier<span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="supplier_name" name="supplier_name" value="{{$indexData->supplier_name}}">
         @error('supplier_name')
             <span class="text-danger">{{ $message }}</span>
@@ -19,7 +19,7 @@
       </div>
 
         <div class="col-md-6 pb-3">
-          <label for="supplier_phone" class="form-label">Supplier Name<span class="text-danger">*</span></label>
+          <label for="supplier_phone" class="form-label">Phone<span class="text-danger">*</span></label>
           <input type="text" class="form-control" id="supplier_phone" name="supplier_phone" value="{{$indexData->supplier_phone}}">
         @error('supplier_phone')
             <span class="text-danger">{{ $message }}</span>
