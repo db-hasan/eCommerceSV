@@ -9,15 +9,21 @@
     
     <form method="post" action="{{ route('purchaes.store') }}" class="row g-3 p-3">
       @csrf
+
+      @if(Session::has('error'))
+        <div class="alert alert-danger">
+            {{ Session::get('error') }}
+        </div>
+      @endif
       
       <div class="row">
         <div class="col-12 bg-light pt-3 pb-5">
-          <label for="suppliers" class="form-label">Suppliers<span class="text-danger">*</span></label>
-          <select class="form-select" aria-label="Default select example" id="suppliers" name="suppliers">
+          <label for="suppliers_name" class="form-label">Suppliers<span class="text-danger">*</span></label>
+          <select class="form-select" aria-label="Default select example" id="suppliers_name" name="suppliers_name">
           <option value="" selected>Select One</option>
-          {{-- @foreach ($indexPackage as $itemPackage)
-          <option value="{{$itemPackage->pack_id}}">{{$itemPackage->pack_location}}</option>
-          @endforeach --}}
+          @foreach ($indexSupplier as $itemSupplier)
+          <option value="{{$itemSupplier->supplier_id}}">{{$itemSupplier->supplier_name}}</option>
+          @endforeach
           </select> 
           @error('suppliers')
               <span class="text-danger">{{ $message }}</span>
@@ -28,11 +34,11 @@
           <div class="pt-3">
               <div class="row item mb-3">
                   <div class="col-4">
-                      <select class="form-select" aria-label="Default select example" name="product[]">
+                      <select class="form-select" aria-label="Default select example" name="product_name">
                           <option value="" selected>Select Product</option>
-                          {{-- @foreach ($indexCosttype as $itemCosttype)
-                          <option value="{{$itemCosttype->costtype_id}}">{{$itemCosttype->costtype_name}}</option>
-                          @endforeach --}}
+                          @foreach ($indexProduct as $itemProduct)
+                          <option value="{{$itemProduct->product_id}}">{{$itemProduct->product_name}}</option>
+                          @endforeach
                       </select>
                       @error('product')
                       <span class="text-danger">{{ $message }}</span>
@@ -40,20 +46,20 @@
                   </div>
 
                   <div class="col-2">
-                      <input type="text" class="form-control" name="buying_price[]" placeholder="Buying price">
+                      <input type="text" class="form-control" name="buying_price" placeholder="Buying price">
                       @error('buying_price')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>
                   <div class="col-2">
-                      <input type="text" class="form-control" name="selling_price[]" placeholder="Selling_price">
+                      <input type="text" class="form-control" name="selling_price" placeholder="Selling_price">
                       @error('selling_price')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>
                   <div class="col-2">
-                      <input type="text" class="form-control" name="purchaes_quantity[]" placeholder="Quantity">
-                      @error('purchaes_quantity')
+                      <input type="text" class="form-control" name="product_quantity" placeholder="Quantity">
+                      @error('product_quantity')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>

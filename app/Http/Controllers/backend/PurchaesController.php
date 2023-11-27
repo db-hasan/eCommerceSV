@@ -4,74 +4,75 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Supplier;
+use App\Models\Product;
 use App\Models\Purchaes;
+use App\Models\P_order;
 use App\Models\Status;
 use Session;
+use DB;
 
 class PurchaesController extends Controller
 {
-    // public function index() {
-    //     $indexpurchaes = Purchaes::all();
-    //     return view('backend/purchaes/index', compact('indexpurchaes'));
-    // }
-
 
     public function index() {
-        $indexpurchaes = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')->get();
+        $indexpurchaes = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')
+                                ->get();
         return view('backend/purchaes/index', compact('indexpurchaes'));
     }
 
     public function create(){
-        return view('backend/purchaes/create');
+        $indexData['indexSupplier']= Supplier::all();
+        $indexData['indexProduct']= Product::all();
+        return view('backend/purchaes/create', $indexData);
     }
-    // public function store(Request $request){
-    //     $rules = [
-    //         'purchaes_name' => 'required | max:50',
-    //     ];
-    //     $v_msg=[
-    //         'purchaes_name.required'=> 'Please enter Name',
-    //     ];
-    //     $this -> validate($request, $rules, $v_msg);
+    public function store(Request $request){
+        $rules = [
+            'suppliers_name' => 'required|max:50',
+        ];
+        
+        $v_msg = [
+            'suppliers_name.required'=> 'Please enter the supplier name.',
+            // Add more messages for other validation rules if needed.
+        ];
+        
+        $this->validate($request, $rules, $v_msg);
 
-    //     $data= new Purchaes();
-    //     $data->purchaes_name= $request->purchaes_name;
-    //     $data->save();
-    //     Session::flash('msg','Data submit successfully');
-    //     return redirect()->route('purchaes.index');
-    // }
+        try { 
+            DB::beginTransaction();
 
-    // public function edit($purchaes_id=null){
-    //     $indexData['indexData'] = Purchaes::find($purchaes_id);
-    //     $indexData['indexStatus']= Status::all();      
-    //     return view('backend/purchaes/edit', $indexData);
-    // }
-    
-    // public function update(Request $request, $purchaes_id){
-    //     $rules = [
-    //         'purchaes_name' => 'required | max:50',
-    //     ];
-    //     $v_msg=[
-    //         'purchaes_name.required'=> 'Please enter Name',
-    //     ];
-    //     $this -> validate($request, $rules, $v_msg);
+            $purchase = new Purchaes();
+            $purchase->suppliers_id = $request->suppliers_name;
+            $purchase->save();
 
-    //     $data= Purchaes::find($purchaes_id);
-    //     $data->purchaes_name= $request->purchaes_name;
-    //     $data->purchaes_status= $request->status;
-    //     $data->save();
-    //     Session::flash('msg','Data submit successfully');
-    //     return redirect()->route('purchaes.index');
-    // }
+            // $types = $request->buying_price;
 
-    // public function show($purchaes_id=null){
-    //     $showData = Purchaes::join('statuses', 'purchaess.purchaes_status', '=', 'statuses.id')->find($purchaes_id);
-    //     return view('backend/purchaes/show', compact('showData'));
-    // }
+            // foreach ($types as $index => $type) {
+            //     $pOrder = new P_order();
+            //     $pOrder->buying_price = $request->$type;
+            //     $pOrder->purchaes_id = $purchase->purchaes_id[$index];
+            //     $pOrder->selling_price = $request->selling_price[$index];
+            //     $pOrder->product_quantity = $request->product_quantity[$index];
+            //     $pOrder->save();
+            // }
 
-    // public function destroy($purchaes_id=null){
-    //     $destroyData = Purchaes::find($purchaes_id);
-    //     $destroyData->delete();
-    //     Session::flash('msg','Data delete successfully');
-    //     return redirect()->route('purchaes.index');
-    // }
+            $pOrder = new P_order();
+            $pOrder->product_id = $request->product_name;
+            $pOrder->purchaes_id = $purchase->purchaes_id;
+            $pOrder->buying_price = $request->buying_price;
+            $pOrder->selling_price = $request->selling_price;
+            $pOrder->product_quantity = $request->product_quantity;
+            $pOrder->save();
+
+            DB::commit();
+            
+            // Flash message and redirect moved outside the try block
+            return redirect()->route('purchaes.index')->with('msg','Data submitted successfully');
+
+        } catch (\Exception $e) {
+            DB::rollback();
+            return back()->with('error','Ops! Data insert fail');
+        }
+    }
+
 }

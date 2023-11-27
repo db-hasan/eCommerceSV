@@ -9,6 +9,11 @@
     </div>
     <hr>
     <div class="custom-scrollbar-table">
+        @if(Session::has('msg'))
+            <div class="alert alert-success">
+                {{ Session::get('msg') }}
+            </div>
+        @endif
         <table id="myTable" class="display">
             <thead>
                 <tr>
