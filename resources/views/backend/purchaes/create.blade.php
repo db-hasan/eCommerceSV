@@ -30,11 +30,13 @@
           @enderror
         </div>
       </div>
+
+      
       <div class="container">
           <div class="pt-3">
               <div class="row item mb-3">
                   <div class="col-4">
-                      <select class="form-select" aria-label="Default select example" name="product_name">
+                      <select class="form-select" aria-label="Default select example" name="product_name[]">
                           <option value="" selected>Select Product</option>
                           @foreach ($indexProduct as $itemProduct)
                           <option value="{{$itemProduct->product_id}}">{{$itemProduct->product_name}}</option>
@@ -46,19 +48,19 @@
                   </div>
 
                   <div class="col-2">
-                      <input type="text" class="form-control" name="buying_price" placeholder="Buying price">
+                      <input type="text" class="form-control" placeholder="Buying price" name="buying_price[]">
                       @error('buying_price')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>
                   <div class="col-2">
-                      <input type="text" class="form-control" name="selling_price" placeholder="Selling_price">
+                      <input type="text" class="form-control" placeholder="Selling_price" name="selling_price[]">
                       @error('selling_price')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>
                   <div class="col-2">
-                      <input type="text" class="form-control" name="product_quantity" placeholder="Quantity">
+                      <input type="text" class="form-control" placeholder="Quantity" name="product_quantity[]">
                       @error('product_quantity')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror

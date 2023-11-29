@@ -19,16 +19,20 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Status</th>
-                    <th class="ps-5 text-end">Action</th>
+                    <th>Number</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th class="text-end">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($indexpurchaes as $itempurchaes)
                 <tr>
                     <td>{{$itempurchaes->purchaes_id}}</td> 
-                    <td>{{$itempurchaes->purchaes_name}}</td> 
-                    <td>{{$itempurchaes->status_name}}</td> 
+                    <td>{{$itempurchaes->supplier_name}}</td> 
+                    <td>{{$itempurchaes->supplier_phone}}</td> 
+                    <td>{{$itempurchaes->supplier_email}}</td> 
+                    <td>{{$itempurchaes->created_at}}</td> 
                     <td class="icons">
                         <a href="{{ route('purchaes.show', $itempurchaes->purchaes_id) }}" type="button"  class="btn view"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{ route('purchaes.edit', $itempurchaes->purchaes_id) }}" type="button" class="btn edit"><i class="fa-solid fa-pen"></i></a>

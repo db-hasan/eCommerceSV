@@ -17,6 +17,7 @@ class PurchaesController extends Controller
 
     public function index() {
         $indexpurchaes = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')
+                                ->join('suppliers', 'purchaes.suppliers_id', '=', 'suppliers.supplier_id')
                                 ->get();
         return view('backend/purchaes/index', compact('indexpurchaes'));
     }
@@ -45,24 +46,17 @@ class PurchaesController extends Controller
             $purchase->suppliers_id = $request->suppliers_name;
             $purchase->save();
 
-            // $types = $request->buying_price;
+            $types = $request->buying_price;
 
-            // foreach ($types as $index => $type) {
-            //     $pOrder = new P_order();
-            //     $pOrder->buying_price = $request->$type;
-            //     $pOrder->purchaes_id = $purchase->purchaes_id[$index];
-            //     $pOrder->selling_price = $request->selling_price[$index];
-            //     $pOrder->product_quantity = $request->product_quantity[$index];
-            //     $pOrder->save();
-            // }
-
-            $pOrder = new P_order();
-            $pOrder->product_id = $request->product_name;
-            $pOrder->purchaes_id = $purchase->purchaes_id;
-            $pOrder->buying_price = $request->buying_price;
-            $pOrder->selling_price = $request->selling_price;
-            $pOrder->product_quantity = $request->product_quantity;
-            $pOrder->save();
+            foreach ($types as $index => $type) {
+                $pOrder = new P_order();
+                $pOrder->purchaes_id = $purchase->purchaes_id;
+                $pOrder->buying_price = $request->buying_price[$index];
+                $pOrder->product_id = $request->product_name[$index];
+                $pOrder->selling_price = $request->selling_price[$index];
+                $pOrder->product_quantity = $request->product_quantity[$index];
+                $pOrder->save();
+            }
 
             DB::commit();
             
