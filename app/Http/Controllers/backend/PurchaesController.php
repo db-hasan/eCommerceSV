@@ -68,13 +68,21 @@ class PurchaesController extends Controller
             return back()->with('error','Ops! Data insert fail');
         }
     }
+    public function show($purchase_id){
+    // Fetch data from Purchaes table along with related status and supplier
+    $showData = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')
+                        ->join('suppliers', 'purchaes.suppliers_id', '=', 'suppliers.supplier_id')
+                        ->where('purchaes.purchaes_id', $purchase_id)
+                        ->first();
 
-    public function show($purchaes_id=null){
-        $showData = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')
-                            ->join('suppliers', 'purchaes.suppliers_id', '=', 'suppliers.supplier_id')
-                            ->find($purchaes_id);
-        return view('backend/purchaes/show', compact('showData'));
-    }
+    // Fetch associated products for the given purchase
+    $indexOrder = P_order::where('purchaes_id', $purchase_id)->get();
+
+    return view('backend/purchaes/show', compact('showData', 'indexOrder'));
+}
+
+    
+
     public function invice($purchaes_id=null){
         $showData = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')->find($purchaes_id);
         return view('backend/purchaes/invice', compact('showData'));
