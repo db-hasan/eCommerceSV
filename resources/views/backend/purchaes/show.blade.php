@@ -43,7 +43,7 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">{{$order->p_order_id}}</th>
-                                    <td>Product Name</td>
+                                    <td>{{$order->product_name}}</td>
                                     <td>{{$order->buying_price}}</td>
                                     <td>{{$order->selling_price}}</td>
                                 </tr>
