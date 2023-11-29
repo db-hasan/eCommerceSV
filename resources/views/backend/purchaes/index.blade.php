@@ -35,7 +35,7 @@
                     <td>{{$itempurchaes->created_at}}</td> 
                     <td class="icons">
                         <a href="{{ route('purchaes.show', $itempurchaes->purchaes_id) }}" type="button"  class="btn view"><i class="fa-solid fa-eye"></i></a>
-                        <a href="{{ route('purchaes.edit', $itempurchaes->purchaes_id) }}" type="button" class="btn edit"><i class="fa-solid fa-pen"></i></a>
+                        <a href="{{ route('purchaes.invice', $itempurchaes->purchaes_id) }}" type="button"  class="btn"><i class="fa-solid fa-file-invoice" style="color: #e4740c;"></i></a>
                         <a href="{{ route('purchaes.destroy', $itempurchaes->purchaes_id) }}" type="button"  class="btn delete" onclick="return confirm('Are you sure dalete')"><i class="fa-solid fa-trash"></i></a>
                     </td>
                 </tr>

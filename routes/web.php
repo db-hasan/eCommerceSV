@@ -142,9 +142,8 @@ Route::middleware('auth')->group(function () {
     Route::get('purchaes/index',[purchaesController::class,'index'])->name('purchaes.index');
     Route::get('purchaes/insert',[purchaesController::class,'create'])->name('purchaes.create');
     Route::post('purchaes/insert',[purchaesController::class,'store'])->name('purchaes.store');
-    Route::get('purchaes/update/{purchaes_id}',[purchaesController::class,'edit'])->name('purchaes.edit');
-    Route::post('purchaes/update/{purchaes_id}',[purchaesController::class,'update'])->name('purchaes.update');
     Route::get('purchaes/show/{purchaes_id}',[purchaesController::class,'show'])->name('purchaes.show');
+    Route::get('purchaes/invice/{purchaes_id}',[purchaesController::class,'invice'])->name('purchaes.invice');
     Route::get('purchaes/destroy/{purchaes_id}',[purchaesController::class,'destroy'])->name('purchaes.destroy');
 });
 

@@ -1,6 +1,7 @@
 @extends('backend/layouts/layout')
 
 @section('content')
-<h1>dghfh</h1>
-
+<div class="container">
+    test
+</div>
 @endsection

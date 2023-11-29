@@ -69,4 +69,15 @@ class PurchaesController extends Controller
         }
     }
 
+    public function show($purchaes_id=null){
+        $showData = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')
+                            ->join('suppliers', 'purchaes.suppliers_id', '=', 'suppliers.supplier_id')
+                            ->find($purchaes_id);
+        return view('backend/purchaes/show', compact('showData'));
+    }
+    public function invice($purchaes_id=null){
+        $showData = Purchaes::join('statuses', 'purchaes.purchaes_status', '=', 'statuses.id')->find($purchaes_id);
+        return view('backend/purchaes/invice', compact('showData'));
+    }
+
 }

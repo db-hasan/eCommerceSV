@@ -9,25 +9,29 @@
                     <div class="d-flex justify-content-between">
                         <h4>All Data</h4>
                         <div class="text-end">
-                            <a href="{{ route('color.index') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i> View Data</a>
+                            <a href="{{ route('purchaes.index') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i> View Data</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row ">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label>ID:</label>
-                            <h6>{{$showData->color_id}}</h6>
+                            <h6>{{$showData->purchaes_id}}</h6>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label>Name:</label>
-                            <h6>{{$showData->color_name}}</h6>
+                            <h6>{{$showData->supplier_name}}</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Name:</label>
+                            <h6>{{$showData->status_name}}</h6>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <div class="text-end">
-                        <a href="{{ route('color.index') }}" class="btn btn-sm btn-dark">Close</a>
+                        <a href="{{ route('purchaes.index') }}" class="btn btn-sm btn-dark">Close</a>
                     </div>
                 </div>
             </div>
