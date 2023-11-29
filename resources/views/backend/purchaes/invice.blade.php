@@ -4,15 +4,22 @@
 <div class="p-5">
     <div class="d-flex justify-content-between">
         <div class="text">
-            <div class="">Purchaes ID: #{{$showData->purchaes_id}}</div>
-            <div class="">{{$showData->created_at}}</div>
+            <div class="">Helpsx IT</div>
+            <div class="">+8801723629080</div>
+            <div class="">infoalihasanbd@gmail.com</div>
+            <div class="">Behar hat, Shibgonj-Bogura</div>
         </div>
-        <div class="text">
+        <div class="text-end">
             <div class="">{{$showData->supplier_name}}</div>
             <div class="">{{$showData->supplier_phone}}</div>
             <div class="">{{$showData->supplier_email}}</div>
             <div class="">{{$showData->supplier_address}}</div>
         </div>
+    </div>
+    <hr>
+    <div class="">
+        <div class="">Purchaes ID: #{{$showData->purchaes_id}}</div>
+        <div class="">{{$showData->created_at}}</div>
     </div>
     <hr>
     <!-- Display other product information as needed -->
