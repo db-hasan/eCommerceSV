@@ -37,6 +37,7 @@
                                 <th scope="col">Product</th>
                                 <th scope="col">Buying Price</th>
                                 <th scope="col">Selling Price</th>
+                                <th scope="col">Quantity</th>
                                 </tr>
                             </thead>
                             @foreach ($indexOrder as $order)
@@ -46,6 +47,7 @@
                                     <td>{{$order->product_name}}</td>
                                     <td>{{$order->buying_price}}</td>
                                     <td>{{$order->selling_price}}</td>
+                                    <td>{{$order->product_quantity}}</td>
                                 </tr>
                                 <tr>
                             </tbody>

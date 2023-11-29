@@ -1,7 +1,7 @@
 @extends('backend/layouts/layout')
 
 @section('content')
-<div class="container">
+<div class="p-5">
     <div class="d-flex justify-content-between">
         <div class="text">
             <div class="">Purchaes ID: #{{$showData->purchaes_id}}</div>
@@ -22,7 +22,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Product</th>
                 <th scope="col">Buying Price</th>
-                <th scope="col">Selling Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
             </tr>
         </thead>
         
@@ -32,7 +33,8 @@
                 <th scope="row">{{$order->p_order_id}}</th>
                 <td>{{$order->product_name}}</td>
                 <td>{{$order->buying_price}}</td>
-                <td>{{$order->selling_price}}</td>
+                <td>{{$order->product_quantity}}</td>
+                <td>{{$order->buying_price*$order->product_quantity}}</td>
             </tr>
             @endforeach
         </tbody>
