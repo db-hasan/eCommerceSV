@@ -28,7 +28,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Product</th>
-                <th scope="col">Buying Price</th>
+                <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Total</th>
             </tr>
@@ -39,13 +39,19 @@
             <tr>
                 <th scope="row">{{$order->p_order_id}}</th>
                 <td>{{$order->product_name}}</td>
-                <td>{{$order->buying_price}}</td>
-                <td>{{$order->product_quantity}}</td>
-                <td>{{$order->buying_price*$order->product_quantity}}</td>
+                <td>{{$order->p_buying_price}}</td>
+                <td>{{$order->p_product_quantity}}</td>
+                <td>{{$order->p_buying_price*$order->p_product_quantity}}</td>
             </tr>
             @endforeach
-        </tbody>
-        
+            <tr >
+                <th class="text-end" colspan="3">Total:</th>
+                <th class="text-start">{{$quantitySum}}</th>
+                <th class="text-end">{{$totalSum}}</th>
+            </tr>
+        </tbody>       
     </table>
 </div>
+
+
 @endsection

@@ -95,8 +95,12 @@ class PurchaesController extends Controller
         $indexOrder = P_order::join('products', 'p_orders.product_id', '=', 'products.product_id')
                             ->where('p_orders.purchaes_id', $purchase_id)
                             ->get();
+        $quantitySum = P_order::where('p_orders.purchaes_id', $purchase_id)->sum('p_product_quantity');
+        $totalSum = P_order::where('p_orders.purchaes_id', $purchase_id)->sum('p_buying_price');
 
-        return view('backend/purchaes/invice', compact('showData', 'indexOrder'));
+        return view('backend/purchaes/invice', compact('showData', 'indexOrder', 'quantitySum', 'totalSum'));
     }
+
+    
 
 }

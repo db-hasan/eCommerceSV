@@ -45,9 +45,9 @@
                                 <tr>
                                     <th scope="row">{{$order->p_order_id}}</th>
                                     <td>{{$order->product_name}}</td>
-                                    <td>{{$order->buying_price}}</td>
-                                    <td>{{$order->selling_price}}</td>
-                                    <td>{{$order->product_quantity}}</td>
+                                    <td>{{$order->p_buying_price}}</td>
+                                    <td>{{$order->p_selling_price}}</td>
+                                    <td>{{$order->p_product_quantity}}</td>
                                 </tr>
                                 <tr>
                             </tbody>
