@@ -1,11 +1,15 @@
+
 @extends('backend/layouts/layout')
+
 
 @section('content')
 <div class="px-5">
     <div class="text-end">
+        <a href="{{ route('purchaes.index') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i> View Data</a>
+
         <a href="#" class="btn btn-sm btn-dark" id="printBtn" onclick="printInvoice()">
-            <i class="fa-solid fa-file-invoice" style="color: #e4740c;"></i> Print Invoice
-        </a>
+            <i class="fa-solid fa-file-invoice" style="color: #fff;"></i> Print Invoice
+        </a>  
     </div>
 
     <div class="pt-3" id="invice">

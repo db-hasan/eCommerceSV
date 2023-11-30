@@ -46,4 +46,5 @@
 
 <script src="{{asset('backend/js/jquery-3.7.1.min.js') }} "></script>
 <script src="{{asset('backend/js/dataTables.js') }} "></script>
+
 @endsection

@@ -99,6 +99,13 @@ class PurchaesController extends Controller
         return view('backend/purchaes/invoice', compact('showData', 'indexOrder'));
     }
 
-    
+    public function destroy($purchaes_id){
+        $destroyDatas = Purchaes::find($purchaes_id);
+        $destroyData = P_order::where('purchaes_id', $purchaes_id)->delete();
+        $destroyDatas->delete();
+        Session::flash('msg','Data delete successfully');
+        return redirect()->route('purchaes.index');
+    }
+
 
 }
