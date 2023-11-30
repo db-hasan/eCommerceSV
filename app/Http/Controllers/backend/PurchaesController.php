@@ -27,7 +27,7 @@ class PurchaesController extends Controller
         $indexData['indexProduct']= Product::all();
         return view('backend/purchaes/create', $indexData);
     }
-    public function store(Request $request){
+    public function store(Request $request){    
         $rules = [
             'suppliers_name' => 'required|max:50',
         ];
@@ -51,10 +51,10 @@ class PurchaesController extends Controller
             foreach ($types as $index => $type) {
                 $pOrder = new P_order();
                 $pOrder->purchaes_id = $purchase->purchaes_id;
-                $pOrder->buying_price = $request->buying_price[$index];
+                $pOrder->p_buying_price = $request->buying_price[$index];
                 $pOrder->product_id = $request->product_name[$index];
-                $pOrder->selling_price = $request->selling_price[$index];
-                $pOrder->product_quantity = $request->product_quantity[$index];
+                $pOrder->p_selling_price = $request->selling_price[$index];
+                $pOrder->p_product_quantity = $request->product_quantity[$index];
                 $pOrder->save();
             }
 
@@ -100,9 +100,8 @@ class PurchaesController extends Controller
     }
 
     public function destroy($purchaes_id){
-        $destroyDatas = Purchaes::find($purchaes_id);
+        $destroyDatas = Purchaes::find($purchaes_id)->delete();
         $destroyData = P_order::where('purchaes_id', $purchaes_id)->delete();
-        $destroyDatas->delete();
         Session::flash('msg','Data delete successfully');
         return redirect()->route('purchaes.index');
     }
