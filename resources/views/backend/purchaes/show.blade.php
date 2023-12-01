@@ -43,7 +43,7 @@
                             @foreach ($indexOrder as $order)
                             <tbody>
                                 <tr>
-                                    <th scope="row">{{$order->p_order_id}}</th>
+                                    <th scope="row">{{$loop->index+1}}</th>
                                     <td>{{$order->product_name}}</td>
                                     <td>{{$order->p_buying_price}}</td>
                                     <td>{{$order->p_selling_price}}</td>
