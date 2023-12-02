@@ -51,6 +51,7 @@ class PurchaesController extends Controller
             foreach ($types as $index => $type) {
                 $pOrder = new P_order();
                 $pOrder->purchaes_id = $purchase->purchaes_id;
+                $pOrder->suppliers_id = $purchase->suppliers_id;
                 $pOrder->p_buying_price = $request->buying_price[$index];
                 $pOrder->product_id = $request->product_name[$index];
                 $pOrder->p_selling_price = $request->selling_price[$index];

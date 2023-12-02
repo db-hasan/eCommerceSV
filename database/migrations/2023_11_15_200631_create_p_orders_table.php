@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('p_orders', function (Blueprint $table) {
             $table->bigIncrements('p_order_id');
             $table->string('purchaes_id',50)->nullable();
+            $table->string('suppliers_id',50)->nullable();
             $table->string('product_id',50)->nullable();
             $table->string('p_buying_price',50)->nullable();
             $table->string('p_selling_price',50)->nullable();
