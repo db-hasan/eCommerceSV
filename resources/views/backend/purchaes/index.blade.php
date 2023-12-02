@@ -32,7 +32,7 @@
                     <td>{{$itempurchaes->supplier_name}}</td> 
                     <td>{{$itempurchaes->supplier_phone}}</td> 
                     <td>{{$itempurchaes->supplier_email}}</td> 
-                    <td>{{$itempurchaes->created_at}}</td> 
+                    <td>{{ date('d M Y', $itempurchaes->created_at->timestamp) }}</td> 
                     <td class="icons">
                         <a href="{{ route('purchaes.show', $itempurchaes->purchaes_id) }}" type="button"  class="btn view"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{ route('purchaes.invice', $itempurchaes->purchaes_id) }}" type="button"  class="btn"><i class="fa-solid fa-file-invoice" style="color: #e4740c;"></i></a>
