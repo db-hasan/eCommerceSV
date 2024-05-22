@@ -13,4 +13,3 @@ Use technologies: HTML, CSS, Bootstrap, JavaScript, jQuery, Ajax, backend PHP(OP
 
 
 ## Live link:
-https://ecommerce.helpsx.com/
